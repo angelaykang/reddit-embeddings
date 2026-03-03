@@ -44,13 +44,13 @@ The pipeline:
 
 ## Installation
 
-From the repository root:
+From the repository root (this `lab 8` directory):
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-pip install -r "labs/lab 8/requirements.txt"
+pip install -r requirements.txt
 ```
 
 ## Configuration
@@ -70,13 +70,13 @@ export MYSQL_DATABASE=reddit_forum
 Run with automatic `k` selection:
 
 ```bash
-python "labs/lab 8/doc2vec_embeddings.py" --outdir "labs/lab 8/doc2vec_results"
+python doc2vec_embeddings.py --outdir "doc2vec_results"
 ```
 
 Run with fixed `k`:
 
 ```bash
-python "labs/lab 8/doc2vec_embeddings.py" --k 5 --outdir "labs/lab 8/doc2vec_results_k5"
+python doc2vec_embeddings.py --k 5 --outdir "doc2vec_results_k5"
 ```
 
 ### Command-Line Options
