@@ -1,0 +1,1175 @@
+{
+  "recommended_configuration": "small",
+  "results": [
+    {
+      "config": {
+        "name": "small",
+        "vector_size": 50,
+        "min_count": 2,
+        "epochs": 30,
+        "dm": 1
+      },
+      "k": 2,
+      "metrics": {
+        "cosine_silhouette": 0.12734125554561615,
+        "per_cluster_silhouette": {
+          "0": 0.19230079650878906,
+          "1": 0.015956640243530273
+        },
+        "davies_bouldin": 4.07287175246995,
+        "calinski_harabasz": 280.644713349866,
+        "cluster_size_std": 652.5,
+        "cluster_sizes": {
+          "0": 3131,
+          "1": 1826
+        }
+      },
+      "k_search": {
+        "k_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "inertias": [
+          3095.6064453125,
+          2993.62646484375,
+          2923.65234375,
+          2874.8583984375,
+          2834.599609375,
+          2798.540283203125,
+          2769.59912109375,
+          2743.75634765625,
+          2720.66845703125,
+          2699.70556640625,
+          2682.28955078125,
+          2665.1474609375,
+          2646.916259765625,
+          2632.6533203125
+        ],
+        "silhouettes": [
+          0.12734125554561615,
+          0.07508010417222977,
+          0.06867621093988419,
+          0.04931258782744408,
+          0.040440306067466736,
+          0.02840784564614296,
+          0.02782268635928631,
+          0.017693063244223595,
+          0.017899317666888237,
+          0.01261111255735159,
+          0.0028013987466692924,
+          -0.0019922074861824512,
+          0.0033522876910865307,
+          0.0005054104258306324
+        ]
+      },
+      "cluster_summaries": [
+        {
+          "cluster_id": 0,
+          "size": 3131,
+          "mean_cosine_silhouette": 0.19230079650878906,
+          "top_keywords": [
+            {
+              "word": "data",
+              "count": 5875
+            },
+            {
+              "word": "science",
+              "count": 2827
+            },
+            {
+              "word": "job",
+              "count": 2384
+            },
+            {
+              "word": "would",
+              "count": 1650
+            },
+            {
+              "word": "experience",
+              "count": 1541
+            },
+            {
+              "word": "like",
+              "count": 1508
+            },
+            {
+              "word": "work",
+              "count": 1396
+            },
+            {
+              "word": "get",
+              "count": 1141
+            },
+            {
+              "word": "years",
+              "count": 1057
+            },
+            {
+              "word": "scientist",
+              "count": 1051
+            },
+            {
+              "word": "role",
+              "count": 1049
+            },
+            {
+              "word": "time",
+              "count": 1036
+            },
+            {
+              "word": "career",
+              "count": 1008
+            },
+            {
+              "word": "learning",
+              "count": 1002
+            },
+            {
+              "word": "jobs",
+              "count": 973
+            },
+            {
+              "word": "com",
+              "count": 948
+            },
+            {
+              "word": "want",
+              "count": 933
+            },
+            {
+              "word": "https",
+              "count": 905
+            },
+            {
+              "word": "roles",
+              "count": 886
+            },
+            {
+              "word": "looking",
+              "count": 878
+            }
+          ],
+          "subreddit_distribution": {
+            "datasciencecareers": 990,
+            "datasciencejobs": 899,
+            "cscareerquestions": 849,
+            "experienceddevs": 321,
+            "tech": 41,
+            "cybersecurity": 31
+          },
+          "representative_posts": [
+            {
+              "reddit_id": "pjh8td",
+              "subreddit": "datasciencejobs",
+              "title": "[Hiring] Staff Data Scientist in Dublin, Ireland / London, England",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "17qnpw7",
+              "subreddit": "datasciencecareers",
+              "title": "#NeuralNetworks #DataScienceSolutions #ArtificialIntelligence #TechInnovation #DeepLearning #PatternRecognition #AIApplications #MachineLearning #EthicalAI #DataAnalysis #TechTrends #Computervision #NaturalLanguageProcessing #BigDataSolutions #FutureTech #SmartTechnology #InnovationEthics #TechAdvan",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1n11r11",
+              "subreddit": "datasciencecareers",
+              "title": "Roast my Resume",
+              "selftext": "Any resume feedback would be massively appreciated."
+            },
+            {
+              "reddit_id": "1rj2xfk",
+              "subreddit": "datasciencecareers",
+              "title": "please review my resume..",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1nkznts",
+              "subreddit": "datasciencecareers",
+              "title": "Roast my resume",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1n8yy8u",
+              "subreddit": "datasciencecareers",
+              "title": "How can I break into AI? Need advice 🙏",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "pjp0jo",
+              "subreddit": "datasciencejobs",
+              "title": "[Hiring] Principal Data Scientist in Dublin, Ireland / London, England",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "piy2zb",
+              "subreddit": "datasciencejobs",
+              "title": "[Hiring] Senior Data Scientist - Toronto Hub in Canada - Toronto",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1lzm1mh",
+              "subreddit": "datasciencecareers",
+              "title": "I need advice",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1m185cy",
+              "subreddit": "datasciencejobs",
+              "title": "Has anyone here taken a Data Science course from Great Learning? Was it worth it?",
+              "selftext": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": 1,
+          "size": 1826,
+          "mean_cosine_silhouette": 0.015956640243530273,
+          "top_keywords": [
+            {
+              "word": "like",
+              "count": 2118
+            },
+            {
+              "word": "work",
+              "count": 1668
+            },
+            {
+              "word": "code",
+              "count": 1425
+            },
+            {
+              "word": "time",
+              "count": 1309
+            },
+            {
+              "word": "team",
+              "count": 1194
+            },
+            {
+              "word": "data",
+              "count": 1133
+            },
+            {
+              "word": "would",
+              "count": 1126
+            },
+            {
+              "word": "company",
+              "count": 1112
+            },
+            {
+              "word": "job",
+              "count": 1106
+            },
+            {
+              "word": "get",
+              "count": 1098
+            },
+            {
+              "word": "people",
+              "count": 1050
+            },
+            {
+              "word": "one",
+              "count": 995
+            },
+            {
+              "word": "new",
+              "count": 913
+            },
+            {
+              "word": "know",
+              "count": 885
+            },
+            {
+              "word": "even",
+              "count": 860
+            },
+            {
+              "word": "years",
+              "count": 786
+            },
+            {
+              "word": "want",
+              "count": 746
+            },
+            {
+              "word": "really",
+              "count": 734
+            },
+            {
+              "word": "also",
+              "count": 728
+            },
+            {
+              "word": "feel",
+              "count": 719
+            }
+          ],
+          "subreddit_distribution": {
+            "experienceddevs": 903,
+            "cscareerquestions": 608,
+            "datasciencejobs": 180,
+            "datasciencecareers": 106,
+            "cybersecurity": 20,
+            "tech": 9
+          },
+          "representative_posts": [
+            {
+              "reddit_id": "1qqd58l",
+              "subreddit": "cscareerquestions",
+              "title": "How does your company reward you for exceeds rating?",
+              "selftext": "Last year I got an “exceeds” rating. After two years of just “meets” and no raise, I figured I’d really push myself and try for exceeds. Turns out even with exceeds, they gave me only a 2% raise. Honestly felt like a clown.\n\nWhat’s the norm at your company?"
+            },
+            {
+              "reddit_id": "1rb1zdm",
+              "subreddit": "cscareerquestions",
+              "title": "Do you think your employer looks at your LLM questions?",
+              "selftext": "Title. I assume they are. I work at a large bank and we've been pushing Copilot usage pretty hard."
+            },
+            {
+              "reddit_id": "1qc2mm4",
+              "subreddit": "experienceddevs",
+              "title": "A senior developer at my company is attempting to create a pipeline to replace our developers…",
+              "selftext": "Not my thread, but:\n\n[https://www.reddit.com/r/ClaudeAI/comments/1qbfbkf/a\\_senior\\_developer\\_at\\_my\\_company\\_is\\_attempting\\_to/](https://www.reddit.com/r/ClaudeAI/comments/1qbfbkf/a_senior_developer_at_my_company_is_attempting_to/)\n\nThe ship is sinking slowly and steadily I'm afraid and there is nothing we can do about it."
+            },
+            {
+              "reddit_id": "1rffbuh",
+              "subreddit": "cscareerquestions",
+              "title": "How to deal with out of touch/bully leadership",
+              "selftext": "Execs at my company are starting to ask “why cannot you just use “Claude“ to do it over a weekend“ to ship a highly complicated products and features that we presented as something that will take a year..wtf 😭"
+            },
+            {
+              "reddit_id": "1qt1eug",
+              "subreddit": "cscareerquestions",
+              "title": "Got the following email to a job that I never applied to. Is this a scam?",
+              "selftext": "[https://imgur.com/nkBKZ0G](https://imgur.com/nkBKZ0G)"
+            },
+            {
+              "reddit_id": "1qwmeyk",
+              "subreddit": "tech",
+              "title": "Microneedle patch uses bubbles to fight stubborn acne",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1q8yf29",
+              "subreddit": "cscareerquestions",
+              "title": "Resume Advice Thread - January 10, 2026",
+              "selftext": "Please use this thread to ask for resume advice and critiques. You should read our [Resume FAQ](https://www.reddit.com/r/cscareerquestions/wiki/faq_resumes) and implement any changes from that before you ask for more advice.\n        \nAbide by the rules, don't be a jerk.\n        \n**Note on anonomyizing your resume:** If you'd like your resume to remain anonymous, make sure you blank out or change all personally identifying information. Also be careful of using your own Google Docs account or DropBox account which can lead back to your personally identifying information. To make absolutely sure you're anonymous, we suggest posting on sites/accounts with no ties to you after thoroughly checking the contents of your resume.\n        \nThis thread is posted each **Tuesday and Saturday at midnight PST**. Previous Resume Advice Threads can be found [here](https://www.reddit.com/r/cscareerquestions/search?q=Resume+Advice+Thread&amp;restrict_sr=on&amp;sort=new&amp;t=all)."
+            },
+            {
+              "reddit_id": "1r24set",
+              "subreddit": "cybersecurity",
+              "title": "Notepad's new Markdown powers served with a side of RCE",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1p1f1ni",
+              "subreddit": "experienceddevs",
+              "title": "Cloudflare RCA",
+              "selftext": "A simple SQL query for a machine learning pipeline took out the internet yesterday. Always find these reports interesting!"
+            },
+            {
+              "reddit_id": "176cbb7",
+              "subreddit": "datasciencecareers",
+              "title": "I am preparing for a data scientist interview, what questions can I expect from the HR team?",
+              "selftext": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "medium",
+        "vector_size": 100,
+        "min_count": 5,
+        "epochs": 40,
+        "dm": 1
+      },
+      "k": 2,
+      "metrics": {
+        "cosine_silhouette": 0.08768094331026077,
+        "per_cluster_silhouette": {
+          "0": 0.16691483557224274,
+          "1": -0.02319282293319702
+        },
+        "davies_bouldin": 5.076929708113186,
+        "calinski_harabasz": 187.88048425595676,
+        "cluster_size_std": 412.5,
+        "cluster_sizes": {
+          "0": 2891,
+          "1": 2066
+        }
+      },
+      "k_search": {
+        "k_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "inertias": [
+          3613.04736328125,
+          3529.47412109375,
+          3477.272705078125,
+          3434.537353515625,
+          3399.53076171875,
+          3371.73583984375,
+          3345.86328125,
+          3322.353515625,
+          3301.56884765625,
+          3284.9267578125,
+          3270.3447265625,
+          3256.3974609375,
+          3241.658935546875,
+          3229.15087890625
+        ],
+        "silhouettes": [
+          0.08768094331026077,
+          0.04012814164161682,
+          0.02776019088923931,
+          -0.009226386435329914,
+          -0.02567226253449917,
+          -0.02280912920832634,
+          -0.024356964975595474,
+          -0.01669359765946865,
+          -0.0169253908097744,
+          -0.03047385811805725,
+          -0.031039375811815262,
+          -0.034816961735486984,
+          -0.027222085744142532,
+          -0.03794277459383011
+        ]
+      },
+      "cluster_summaries": [
+        {
+          "cluster_id": 0,
+          "size": 2891,
+          "mean_cosine_silhouette": 0.16691483557224274,
+          "top_keywords": [
+            {
+              "word": "data",
+              "count": 5800
+            },
+            {
+              "word": "science",
+              "count": 2729
+            },
+            {
+              "word": "job",
+              "count": 2003
+            },
+            {
+              "word": "would",
+              "count": 1392
+            },
+            {
+              "word": "experience",
+              "count": 1360
+            },
+            {
+              "word": "like",
+              "count": 1194
+            },
+            {
+              "word": "work",
+              "count": 1135
+            },
+            {
+              "word": "scientist",
+              "count": 1069
+            },
+            {
+              "word": "com",
+              "count": 1008
+            },
+            {
+              "word": "learning",
+              "count": 973
+            },
+            {
+              "word": "https",
+              "count": 955
+            },
+            {
+              "word": "get",
+              "count": 911
+            },
+            {
+              "word": "role",
+              "count": 911
+            },
+            {
+              "word": "jobs",
+              "count": 884
+            },
+            {
+              "word": "time",
+              "count": 880
+            },
+            {
+              "word": "years",
+              "count": 867
+            },
+            {
+              "word": "career",
+              "count": 852
+            },
+            {
+              "word": "advice",
+              "count": 832
+            },
+            {
+              "word": "roles",
+              "count": 815
+            },
+            {
+              "word": "looking",
+              "count": 807
+            }
+          ],
+          "subreddit_distribution": {
+            "datasciencecareers": 992,
+            "datasciencejobs": 874,
+            "cscareerquestions": 709,
+            "experienceddevs": 239,
+            "tech": 45,
+            "cybersecurity": 32
+          },
+          "representative_posts": [
+            {
+              "reddit_id": "pjp0jo",
+              "subreddit": "datasciencejobs",
+              "title": "[Hiring] Principal Data Scientist in Dublin, Ireland / London, England",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "piy2zb",
+              "subreddit": "datasciencejobs",
+              "title": "[Hiring] Senior Data Scientist - Toronto Hub in Canada - Toronto",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1nkznts",
+              "subreddit": "datasciencecareers",
+              "title": "Roast my resume",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1p7lean",
+              "subreddit": "datasciencecareers",
+              "title": "Datacamp subscription offer",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1nbs5gi",
+              "subreddit": "datasciencecareers",
+              "title": "¿Maestrías en IA/Ciencia de Datos?Paris/Nantes/Lyon",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1mei1zf",
+              "subreddit": "datasciencecareers",
+              "title": "Feedback on Resume",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1rj2xfk",
+              "subreddit": "datasciencecareers",
+              "title": "please review my resume..",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1m0q1r1",
+              "subreddit": "datasciencecareers",
+              "title": "Roast my resume",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1ntbaf7",
+              "subreddit": "datasciencecareers",
+              "title": "Job prospects",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1n8yy8u",
+              "subreddit": "datasciencecareers",
+              "title": "How can I break into AI? Need advice 🙏",
+              "selftext": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": 1,
+          "size": 2066,
+          "mean_cosine_silhouette": -0.02319282293319702,
+          "top_keywords": [
+            {
+              "word": "like",
+              "count": 2432
+            },
+            {
+              "word": "work",
+              "count": 1929
+            },
+            {
+              "word": "job",
+              "count": 1487
+            },
+            {
+              "word": "time",
+              "count": 1465
+            },
+            {
+              "word": "code",
+              "count": 1456
+            },
+            {
+              "word": "would",
+              "count": 1384
+            },
+            {
+              "word": "get",
+              "count": 1328
+            },
+            {
+              "word": "company",
+              "count": 1270
+            },
+            {
+              "word": "team",
+              "count": 1257
+            },
+            {
+              "word": "data",
+              "count": 1208
+            },
+            {
+              "word": "people",
+              "count": 1201
+            },
+            {
+              "word": "one",
+              "count": 1105
+            },
+            {
+              "word": "know",
+              "count": 1033
+            },
+            {
+              "word": "new",
+              "count": 1009
+            },
+            {
+              "word": "even",
+              "count": 988
+            },
+            {
+              "word": "years",
+              "count": 976
+            },
+            {
+              "word": "want",
+              "count": 911
+            },
+            {
+              "word": "also",
+              "count": 893
+            },
+            {
+              "word": "really",
+              "count": 886
+            },
+            {
+              "word": "feel",
+              "count": 874
+            }
+          ],
+          "subreddit_distribution": {
+            "experienceddevs": 985,
+            "cscareerquestions": 748,
+            "datasciencejobs": 205,
+            "datasciencecareers": 104,
+            "cybersecurity": 19,
+            "tech": 5
+          },
+          "representative_posts": [
+            {
+              "reddit_id": "1qap2vl",
+              "subreddit": "cscareerquestions",
+              "title": "Is it important to have personal projects if you're already employed?",
+              "selftext": "I have my github repo listed on my resume but it's pretty bare (and what does exist is pretty old from before I got my first job)."
+            },
+            {
+              "reddit_id": "1qxbpo3",
+              "subreddit": "cscareerquestions",
+              "title": "DEAR PROFESSIONAL COMPUTER TOUCHERS -- FRIDAY RANT THREAD FOR February 06, 2026",
+              "selftext": "AND NOW FOR SOMETHING ENTIRELY DIFFERENT.\n        \nTHE BUILDS I LOVE, THE SCRIPTS I DROP, TO BE PART OF, THE APP, CAN'T STOP\n        \nTHIS IS THE RANT THREAD. IT IS FOR RANTS.\n\nCAPS LOCK ON, DOWNVOTES OFF, FEEL FREE TO BREAK RULE 2 IF SOMEONE LIKES SOMETHING THAT YOU DON'T BUT IF YOU POST SOME RACIST/HOMOPHOBIC/SEXIST BULLSHIT IT'LL BE GONE FASTER THAN A NEW MESSAGING APP AT GOOGLE.\n\n(RANTING BEGINS AT MIDNIGHT EVERY FRIDAY, BEST COAST TIME. PREVIOUS FRIDAY RANT THREADS CAN BE FOUND [HERE](https://www.reddit.com/r/cscareerquestions/search?q=Friday+Rant+Thread&amp;restrict_sr=on&amp;sort=new&amp;t=all).)"
+            },
+            {
+              "reddit_id": "1pfki17",
+              "subreddit": "experienceddevs",
+              "title": "Tweaks in PR",
+              "selftext": "I have a team lead who doesn't add comments on a PR but rather add his tweaks to it and then merge it so we don't know what changed or if the functionalities still working correctly. Is this normal?"
+            },
+            {
+              "reddit_id": "1oc92ve",
+              "subreddit": "datasciencecareers",
+              "title": "Everyone's rewriting their resume 47 times when the actual problem is you're applying to roles with 400 people in line",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1p2fakw",
+              "subreddit": "experienceddevs",
+              "title": "Reorg: Am I being assessed?",
+              "selftext": "Our team was reorged and merged with another team. Is it common for the leadership to reassess talent and cost? They’re telling us we are safe but I want to read between the lines."
+            },
+            {
+              "reddit_id": "1r24set",
+              "subreddit": "cybersecurity",
+              "title": "Notepad's new Markdown powers served with a side of RCE",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1qpferj",
+              "subreddit": "tech",
+              "title": "Goodbye to fragile solar cells: New method makes them almost eternal",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1qc2mm4",
+              "subreddit": "experienceddevs",
+              "title": "A senior developer at my company is attempting to create a pipeline to replace our developers…",
+              "selftext": "Not my thread, but:\n\n[https://www.reddit.com/r/ClaudeAI/comments/1qbfbkf/a\\_senior\\_developer\\_at\\_my\\_company\\_is\\_attempting\\_to/](https://www.reddit.com/r/ClaudeAI/comments/1qbfbkf/a_senior_developer_at_my_company_is_attempting_to/)\n\nThe ship is sinking slowly and steadily I'm afraid and there is nothing we can do about it."
+            },
+            {
+              "reddit_id": "1pbizs3",
+              "subreddit": "experienceddevs",
+              "title": "It's December, what have been your favorite podcasts / talks from this year?",
+              "selftext": "I listen to a lot of corecursive and software engineering radio"
+            },
+            {
+              "reddit_id": "1rb1zdm",
+              "subreddit": "cscareerquestions",
+              "title": "Do you think your employer looks at your LLM questions?",
+              "selftext": "Title. I assume they are. I work at a large bank and we've been pushing Copilot usage pretty hard."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "large",
+        "vector_size": 200,
+        "min_count": 2,
+        "epochs": 60,
+        "dm": 0
+      },
+      "k": 2,
+      "metrics": {
+        "cosine_silhouette": 0.039872296154499054,
+        "per_cluster_silhouette": {
+          "0": -0.013997549191117287,
+          "1": 0.11190193891525269
+        },
+        "davies_bouldin": 6.228302062199402,
+        "calinski_harabasz": 123.31765951161135,
+        "cluster_size_std": 357.5,
+        "cluster_sizes": {
+          "0": 2836,
+          "1": 2121
+        }
+      },
+      "k_search": {
+        "k_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "inertias": [
+          3799.2177734375,
+          3736.20166015625,
+          3699.25341796875,
+          3670.494873046875,
+          3649.08056640625,
+          3630.89453125,
+          3613.31103515625,
+          3597.930908203125,
+          3580.52978515625,
+          3568.174560546875,
+          3552.6513671875,
+          3543.770263671875,
+          3532.39599609375,
+          3524.33544921875
+        ],
+        "silhouettes": [
+          0.039872296154499054,
+          0.0056624808348715305,
+          0.010176912881433964,
+          0.004812133964151144,
+          0.007030581124126911,
+          0.00935813132673502,
+          -0.013825232163071632,
+          -0.0060602459125220776,
+          -0.017797932028770447,
+          -0.019230296835303307,
+          -0.02352536842226982,
+          -0.016249092295765877,
+          -0.030917566269636154,
+          -0.02915371209383011
+        ]
+      },
+      "cluster_summaries": [
+        {
+          "cluster_id": 0,
+          "size": 2836,
+          "mean_cosine_silhouette": -0.013997549191117287,
+          "top_keywords": [
+            {
+              "word": "like",
+              "count": 3009
+            },
+            {
+              "word": "work",
+              "count": 2342
+            },
+            {
+              "word": "job",
+              "count": 2035
+            },
+            {
+              "word": "would",
+              "count": 1889
+            },
+            {
+              "word": "time",
+              "count": 1823
+            },
+            {
+              "word": "get",
+              "count": 1665
+            },
+            {
+              "word": "company",
+              "count": 1585
+            },
+            {
+              "word": "code",
+              "count": 1527
+            },
+            {
+              "word": "data",
+              "count": 1458
+            },
+            {
+              "word": "team",
+              "count": 1423
+            },
+            {
+              "word": "people",
+              "count": 1417
+            },
+            {
+              "word": "one",
+              "count": 1330
+            },
+            {
+              "word": "know",
+              "count": 1313
+            },
+            {
+              "word": "years",
+              "count": 1278
+            },
+            {
+              "word": "new",
+              "count": 1189
+            },
+            {
+              "word": "even",
+              "count": 1172
+            },
+            {
+              "word": "want",
+              "count": 1169
+            },
+            {
+              "word": "experience",
+              "count": 1168
+            },
+            {
+              "word": "really",
+              "count": 1138
+            },
+            {
+              "word": "also",
+              "count": 1119
+            }
+          ],
+          "subreddit_distribution": {
+            "cscareerquestions": 1209,
+            "experienceddevs": 1198,
+            "datasciencejobs": 193,
+            "datasciencecareers": 183,
+            "cybersecurity": 29,
+            "tech": 24
+          },
+          "representative_posts": [
+            {
+              "reddit_id": "1isr1lu",
+              "subreddit": "datasciencecareers",
+              "title": "Vaandu",
+              "selftext": "Is Vaandu a legit company or just a scam?"
+            },
+            {
+              "reddit_id": "1lipvbn",
+              "subreddit": "datasciencejobs",
+              "title": "Can you review my CV?",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1qxil2p",
+              "subreddit": "tech",
+              "title": "Wood scraps turn 'useless' desert sand into concrete",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1qszrap",
+              "subreddit": "tech",
+              "title": "New ultrasound pad aims to make prenatal visits less unpleasant",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1qjwq10",
+              "subreddit": "tech",
+              "title": "Forestry-waste pine bark could be used to pull antibiotics out of wastewater",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1owpeqx",
+              "subreddit": "experienceddevs",
+              "title": "How to run exceptional 1:1 for Engineers",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1m0pv98",
+              "subreddit": "datasciencejobs",
+              "title": "I majored in IT does anyone even want this shit anymore?",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1qmmuvl",
+              "subreddit": "tech",
+              "title": "Stress-reduction molecule has potential to treat aging and metabolic disorders",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1lxh2u7",
+              "subreddit": "datasciencecareers",
+              "title": "The Agentic System Design Interview: How to evaluate AI Engineers",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "pkz8ux",
+              "subreddit": "datasciencejobs",
+              "title": "Subreddit has been set to restricted.",
+              "selftext": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": 1,
+          "size": 2121,
+          "mean_cosine_silhouette": 0.11190193891525269,
+          "top_keywords": [
+            {
+              "word": "data",
+              "count": 5550
+            },
+            {
+              "word": "science",
+              "count": 2645
+            },
+            {
+              "word": "job",
+              "count": 1455
+            },
+            {
+              "word": "scientist",
+              "count": 1026
+            },
+            {
+              "word": "experience",
+              "count": 1008
+            },
+            {
+              "word": "would",
+              "count": 887
+            },
+            {
+              "word": "com",
+              "count": 864
+            },
+            {
+              "word": "learning",
+              "count": 841
+            },
+            {
+              "word": "https",
+              "count": 815
+            },
+            {
+              "word": "work",
+              "count": 722
+            },
+            {
+              "word": "jobs",
+              "count": 690
+            },
+            {
+              "word": "looking",
+              "count": 640
+            },
+            {
+              "word": "role",
+              "count": 631
+            },
+            {
+              "word": "like",
+              "count": 617
+            },
+            {
+              "word": "career",
+              "count": 610
+            },
+            {
+              "word": "analytics",
+              "count": 608
+            },
+            {
+              "word": "roles",
+              "count": 608
+            },
+            {
+              "word": "get",
+              "count": 574
+            },
+            {
+              "word": "years",
+              "count": 565
+            },
+            {
+              "word": "advice",
+              "count": 565
+            }
+          ],
+          "subreddit_distribution": {
+            "datasciencecareers": 913,
+            "datasciencejobs": 886,
+            "cscareerquestions": 248,
+            "experienceddevs": 26,
+            "tech": 26,
+            "cybersecurity": 22
+          },
+          "representative_posts": [
+            {
+              "reddit_id": "1pjwbch",
+              "subreddit": "datasciencecareers",
+              "title": "Data science",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1n0ko8x",
+              "subreddit": "datasciencecareers",
+              "title": "Data science carrier",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1n1hnbq",
+              "subreddit": "datasciencecareers",
+              "title": "Data science masters program",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1o8w2m0",
+              "subreddit": "datasciencecareers",
+              "title": "Entry-Level Data Science Jobs?",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1nxfzz6",
+              "subreddit": "datasciencecareers",
+              "title": "Healthcare data",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1imd77q",
+              "subreddit": "datasciencecareers",
+              "title": "Data Analytics Survey",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "pjlo7t",
+              "subreddit": "datasciencejobs",
+              "title": "[Hiring] Data Analyst in Amsterdam",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1my1285",
+              "subreddit": "datasciencecareers",
+              "title": "Learnbay Data Science Course",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1p12mri",
+              "subreddit": "datasciencecareers",
+              "title": "From MSc in Marine Biology to Data Science",
+              "selftext": ""
+            },
+            {
+              "reddit_id": "1nirq7i",
+              "subreddit": "datasciencecareers",
+              "title": "Data Scientist Position at Crunchyroll",
+              "selftext": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

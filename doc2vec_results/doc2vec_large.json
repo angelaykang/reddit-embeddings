@@ -1,0 +1,390 @@
+{
+  "config": {
+    "name": "large",
+    "vector_size": 200,
+    "min_count": 2,
+    "epochs": 60,
+    "dm": 0
+  },
+  "k": 2,
+  "metrics": {
+    "cosine_silhouette": 0.039872296154499054,
+    "per_cluster_silhouette": {
+      "0": -0.013997549191117287,
+      "1": 0.11190193891525269
+    },
+    "davies_bouldin": 6.228302062199402,
+    "calinski_harabasz": 123.31765951161135,
+    "cluster_size_std": 357.5,
+    "cluster_sizes": {
+      "0": 2836,
+      "1": 2121
+    }
+  },
+  "k_search": {
+    "k_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "inertias": [
+      3799.2177734375,
+      3736.20166015625,
+      3699.25341796875,
+      3670.494873046875,
+      3649.08056640625,
+      3630.89453125,
+      3613.31103515625,
+      3597.930908203125,
+      3580.52978515625,
+      3568.174560546875,
+      3552.6513671875,
+      3543.770263671875,
+      3532.39599609375,
+      3524.33544921875
+    ],
+    "silhouettes": [
+      0.039872296154499054,
+      0.0056624808348715305,
+      0.010176912881433964,
+      0.004812133964151144,
+      0.007030581124126911,
+      0.00935813132673502,
+      -0.013825232163071632,
+      -0.0060602459125220776,
+      -0.017797932028770447,
+      -0.019230296835303307,
+      -0.02352536842226982,
+      -0.016249092295765877,
+      -0.030917566269636154,
+      -0.02915371209383011
+    ]
+  },
+  "cluster_summaries": [
+    {
+      "cluster_id": 0,
+      "size": 2836,
+      "mean_cosine_silhouette": -0.013997549191117287,
+      "top_keywords": [
+        {
+          "word": "like",
+          "count": 3009
+        },
+        {
+          "word": "work",
+          "count": 2342
+        },
+        {
+          "word": "job",
+          "count": 2035
+        },
+        {
+          "word": "would",
+          "count": 1889
+        },
+        {
+          "word": "time",
+          "count": 1823
+        },
+        {
+          "word": "get",
+          "count": 1665
+        },
+        {
+          "word": "company",
+          "count": 1585
+        },
+        {
+          "word": "code",
+          "count": 1527
+        },
+        {
+          "word": "data",
+          "count": 1458
+        },
+        {
+          "word": "team",
+          "count": 1423
+        },
+        {
+          "word": "people",
+          "count": 1417
+        },
+        {
+          "word": "one",
+          "count": 1330
+        },
+        {
+          "word": "know",
+          "count": 1313
+        },
+        {
+          "word": "years",
+          "count": 1278
+        },
+        {
+          "word": "new",
+          "count": 1189
+        },
+        {
+          "word": "even",
+          "count": 1172
+        },
+        {
+          "word": "want",
+          "count": 1169
+        },
+        {
+          "word": "experience",
+          "count": 1168
+        },
+        {
+          "word": "really",
+          "count": 1138
+        },
+        {
+          "word": "also",
+          "count": 1119
+        }
+      ],
+      "subreddit_distribution": {
+        "cscareerquestions": 1209,
+        "experienceddevs": 1198,
+        "datasciencejobs": 193,
+        "datasciencecareers": 183,
+        "cybersecurity": 29,
+        "tech": 24
+      },
+      "representative_posts": [
+        {
+          "reddit_id": "1isr1lu",
+          "subreddit": "datasciencecareers",
+          "title": "Vaandu",
+          "selftext": "Is Vaandu a legit company or just a scam?"
+        },
+        {
+          "reddit_id": "1lipvbn",
+          "subreddit": "datasciencejobs",
+          "title": "Can you review my CV?",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1qxil2p",
+          "subreddit": "tech",
+          "title": "Wood scraps turn 'useless' desert sand into concrete",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1qszrap",
+          "subreddit": "tech",
+          "title": "New ultrasound pad aims to make prenatal visits less unpleasant",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1qjwq10",
+          "subreddit": "tech",
+          "title": "Forestry-waste pine bark could be used to pull antibiotics out of wastewater",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1owpeqx",
+          "subreddit": "experienceddevs",
+          "title": "How to run exceptional 1:1 for Engineers",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1m0pv98",
+          "subreddit": "datasciencejobs",
+          "title": "I majored in IT does anyone even want this shit anymore?",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1qmmuvl",
+          "subreddit": "tech",
+          "title": "Stress-reduction molecule has potential to treat aging and metabolic disorders",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1lxh2u7",
+          "subreddit": "datasciencecareers",
+          "title": "The Agentic System Design Interview: How to evaluate AI Engineers",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "pkz8ux",
+          "subreddit": "datasciencejobs",
+          "title": "Subreddit has been set to restricted.",
+          "selftext": ""
+        }
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "size": 2121,
+      "mean_cosine_silhouette": 0.11190193891525269,
+      "top_keywords": [
+        {
+          "word": "data",
+          "count": 5550
+        },
+        {
+          "word": "science",
+          "count": 2645
+        },
+        {
+          "word": "job",
+          "count": 1455
+        },
+        {
+          "word": "scientist",
+          "count": 1026
+        },
+        {
+          "word": "experience",
+          "count": 1008
+        },
+        {
+          "word": "would",
+          "count": 887
+        },
+        {
+          "word": "com",
+          "count": 864
+        },
+        {
+          "word": "learning",
+          "count": 841
+        },
+        {
+          "word": "https",
+          "count": 815
+        },
+        {
+          "word": "work",
+          "count": 722
+        },
+        {
+          "word": "jobs",
+          "count": 690
+        },
+        {
+          "word": "looking",
+          "count": 640
+        },
+        {
+          "word": "role",
+          "count": 631
+        },
+        {
+          "word": "like",
+          "count": 617
+        },
+        {
+          "word": "career",
+          "count": 610
+        },
+        {
+          "word": "analytics",
+          "count": 608
+        },
+        {
+          "word": "roles",
+          "count": 608
+        },
+        {
+          "word": "get",
+          "count": 574
+        },
+        {
+          "word": "years",
+          "count": 565
+        },
+        {
+          "word": "advice",
+          "count": 565
+        }
+      ],
+      "subreddit_distribution": {
+        "datasciencecareers": 913,
+        "datasciencejobs": 886,
+        "cscareerquestions": 248,
+        "experienceddevs": 26,
+        "tech": 26,
+        "cybersecurity": 22
+      },
+      "representative_posts": [
+        {
+          "reddit_id": "1pjwbch",
+          "subreddit": "datasciencecareers",
+          "title": "Data science",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1n0ko8x",
+          "subreddit": "datasciencecareers",
+          "title": "Data science carrier",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1n1hnbq",
+          "subreddit": "datasciencecareers",
+          "title": "Data science masters program",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1o8w2m0",
+          "subreddit": "datasciencecareers",
+          "title": "Entry-Level Data Science Jobs?",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1nxfzz6",
+          "subreddit": "datasciencecareers",
+          "title": "Healthcare data",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1imd77q",
+          "subreddit": "datasciencecareers",
+          "title": "Data Analytics Survey",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "pjlo7t",
+          "subreddit": "datasciencejobs",
+          "title": "[Hiring] Data Analyst in Amsterdam",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1my1285",
+          "subreddit": "datasciencecareers",
+          "title": "Learnbay Data Science Course",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1p12mri",
+          "subreddit": "datasciencecareers",
+          "title": "From MSc in Marine Biology to Data Science",
+          "selftext": ""
+        },
+        {
+          "reddit_id": "1nirq7i",
+          "subreddit": "datasciencecareers",
+          "title": "Data Scientist Position at Crunchyroll",
+          "selftext": ""
+        }
+      ]
+    }
+  ]
+}
