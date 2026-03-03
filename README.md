@@ -8,8 +8,8 @@ The pipeline:
 - loads preprocessed Reddit data from MySQL,
 - trains three Doc2Vec configurations,
 - clusters embeddings using a cosine-distance workflow,
-- compares model configurations using quantitative and qualitative signals,
-- exports plots and JSON summaries.
+- compares three Doc2Vec configurations using quantitative and qualitative signals,
+- exports plots for visual inspection of clustering quality.
 
 ## Features
 
@@ -89,33 +89,8 @@ python "labs/lab 8/doc2vec_embeddings.py" --k 5 --outdir "labs/lab 8/doc2vec_res
 ## Outputs
 
 For each configuration:
-- `doc2vec_<config>.json`
 - `elbow_sil_<config>.png` (if auto-search is used)
 - `clusters_2d_<config>.png`
 - `cluster_sizes_<config>.png`
 - `per_cluster_sil_<config>.png`
 
-Combined:
-- `config_comparison.png`
-- `doc2vec_all_configs.json`
-
-## Troubleshooting
-
-- **MySQL auth error (`caching_sha2_password` / `sha256_password`)**
-  ```bash
-  pip install cryptography
-  ```
-
-- **No data loaded**
-  Confirm database credentials and ensure the `posts` table contains rows.
-
-- **Missing dependencies**
-  Reinstall from `requirements.txt` inside an activated virtual environment.
-
-## Reproducibility
-
-Random seeds are set for key modeling components to improve run-to-run consistency. Minor variation can still occur across environments and package versions.
-
-## License
-
-For educational and research use.
