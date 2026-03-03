@@ -2,7 +2,6 @@
 
 import os
 import re
-import json
 import argparse
 from collections import Counter
 
@@ -48,10 +47,6 @@ MYSQL_DATABASE_NAME = os.environ.get("MYSQL_DATABASE", "reddit_forum")
 MYSQL_PASSWORD = os.environ.get("MYSQL_PASSWORD", "")
 
 
-# ---------------------------------------------------------------------------
-# Database helpers
-# ---------------------------------------------------------------------------
-
 def get_conn():
     return pymysql.connect(
         host=MYSQL_HOST,
@@ -90,10 +85,6 @@ def load_posts(conn):
     return df
 
 
-# ---------------------------------------------------------------------------
-# Text helpers
-# ---------------------------------------------------------------------------
-
 def build_documents(df):
     """Concatenate cleaned title and selftext into a single document string."""
     titles = df["cleaned_title"].fillna("")
@@ -105,10 +96,6 @@ def tokenize_docs(docs):
     """Whitespace tokenisation (text was already cleaned during ingestion)."""
     return [doc.lower().split() for doc in docs]
 
-
-# ---------------------------------------------------------------------------
-# Doc2Vec training
-# ---------------------------------------------------------------------------
 
 def train_doc2vec(tagged_docs, vector_size, min_count, epochs, dm=1, workers=4):
     """Build and train a Doc2Vec model."""
@@ -136,10 +123,6 @@ def embeddings_from_model(model, num_docs):
     """Extract the document vectors from a trained Doc2Vec model."""
     return np.vstack([model.dv[i] for i in range(num_docs)])
 
-
-# ---------------------------------------------------------------------------
-# Cosine-distance clustering
-# ---------------------------------------------------------------------------
 
 def cosine_normalize(embeddings):
     """
@@ -186,10 +169,6 @@ def run_kmeans(embeddings_norm, k):
     return labels, km
 
 
-# ---------------------------------------------------------------------------
-# Quantitative metrics
-# ---------------------------------------------------------------------------
-
 def compute_metrics(embeddings_norm, labels, km):
     """Compute clustering metrics used in the report."""
     k = len(km.cluster_centers_)
@@ -220,10 +199,6 @@ def compute_metrics(embeddings_norm, labels, km):
         "cluster_sizes": sizes,
     }
 
-
-# ---------------------------------------------------------------------------
-# Cluster content analysis
-# ---------------------------------------------------------------------------
 
 def extract_cluster_keywords(df, labels, k, top_n=20):
     """
@@ -273,10 +248,6 @@ def subreddit_distribution(df, labels, k):
         dist[cid] = df[df["cluster"] == cid]["subreddit"].value_counts().to_dict()
     return dist
 
-
-# ---------------------------------------------------------------------------
-# Visualisation
-# ---------------------------------------------------------------------------
 
 def plot_elbow_silhouettes(k_values, inertias, silhouettes, best_k, path):
     """Side-by-side elbow (inertia) and cosine-silhouette curves."""
@@ -442,10 +413,6 @@ def plot_config_comparison(results, outdir):
     print(f"\nSaved comparison plot -> {path}")
 
 
-# ---------------------------------------------------------------------------
-# Per-configuration pipeline
-# ---------------------------------------------------------------------------
-
 def run_configuration(df, docs, tokens, config, outdir,
                       k=None, k_min=2, k_max=15):
     """Run full pipeline for one Doc2Vec configuration."""
@@ -580,190 +547,6 @@ def run_configuration(df, docs, tokens, config, outdir,
     }
 
 
-# ---------------------------------------------------------------------------
-# Comparative evaluation
-# ---------------------------------------------------------------------------
-
-def comparative_evaluation(results):
-    """Print cross-configuration comparison and recommendation."""
-    sep = "=" * 80
-    print(f"\n\n{sep}")
-    print("  COMPARATIVE EVALUATION OF DOC2VEC CONFIGURATIONS")
-    print(sep)
-
-    print("\n  1) QUANTITATIVE METRICS\n")
-    header = (
-        f"  {'Config':<10s} {'Dim':>4s} {'MC':>3s} {'Ep':>3s} {'DM':>3s} "
-        f"{'k':>3s} {'Sil(cos)':>9s} {'DB':>7s} {'CH':>9s} {'SizeStd':>8s}"
-    )
-    print(header)
-    print("  " + "-" * (len(header) - 2))
-    for r in results:
-        c = r["config"]
-        m = r["metrics"]
-        print(
-            f"  {c['name']:<10s} {c['vector_size']:>4d} {c['min_count']:>3d} "
-            f"{c['epochs']:>3d} {c.get('dm',1):>3d} {r['k']:>3d} "
-            f"{m['cosine_silhouette']:>9.4f} {m['davies_bouldin']:>7.4f} "
-            f"{m['calinski_harabasz']:>9.1f} {m['cluster_size_std']:>8.1f}"
-        )
-
-    best_sil = max(results, key=lambda r: r["metrics"]["cosine_silhouette"])
-    best_db  = min(results, key=lambda r: r["metrics"]["davies_bouldin"])
-    best_ch  = max(results, key=lambda r: r["metrics"]["calinski_harabasz"])
-    best_bal = min(results, key=lambda r: r["metrics"]["cluster_size_std"])
-
-    print(f"\n  Best cosine silhouette  (highest): {best_sil['config']['name']} "
-          f"= {best_sil['metrics']['cosine_silhouette']:.4f}")
-    print(f"  Best Davies-Bouldin    (lowest) : {best_db['config']['name']} "
-          f"= {best_db['metrics']['davies_bouldin']:.4f}")
-    print(f"  Best Calinski-Harabasz (highest): {best_ch['config']['name']} "
-          f"= {best_ch['metrics']['calinski_harabasz']:.1f}")
-    print(f"  Most balanced clusters (lowest) : {best_bal['config']['name']} "
-          f"= {best_bal['metrics']['cluster_size_std']:.1f}")
-
-    print(f"\n  2) PER-CLUSTER COSINE SILHOUETTE\n")
-    for r in results:
-        name = r["config"]["name"]
-        pc = r["metrics"]["per_cluster_silhouette"]
-        vals = [f"C{cid}={v:.3f}" for cid, v in sorted(pc.items(), key=lambda x: int(x[0]))]
-        print(f"    [{name}] " + "  ".join(vals))
-        neg = [cid for cid, v in pc.items() if float(v) < 0]
-        if neg:
-            print(f"      WARNING: clusters with negative silhouette (poor coherence): {neg}")
-
-    print(f"\n  3) KEYWORD DISTINCTIVENESS (top-5 overlap between cluster pairs)\n")
-    for r in results:
-        name = r["config"]["name"]
-        summaries = r["cluster_summaries"]
-        overlap_pairs = 0
-        total_pairs = 0
-        overlap_details = []
-        for i in range(len(summaries)):
-            for j in range(i + 1, len(summaries)):
-                kw_i = set(w["word"] for w in summaries[i]["top_keywords"][:5])
-                kw_j = set(w["word"] for w in summaries[j]["top_keywords"][:5])
-                shared = kw_i & kw_j
-                if shared:
-                    overlap_pairs += 1
-                    overlap_details.append(
-                        f"C{summaries[i]['cluster_id']}-C{summaries[j]['cluster_id']}: "
-                        f"{', '.join(sorted(shared))}"
-                    )
-                total_pairs += 1
-        pct = (overlap_pairs / total_pairs * 100) if total_pairs else 0
-        print(f"    [{name}] overlapping pairs: {overlap_pairs}/{total_pairs} ({pct:.0f}%)")
-        if overlap_details:
-            for od in overlap_details:
-                print(f"      {od}")
-        else:
-            print(f"      (no shared top-5 keywords between any cluster pair)")
-
-    print(f"\n  4) SUBREDDIT ALIGNMENT\n")
-    print("  If clusters align well with subreddits, the embeddings capture")
-    print("  community-level topical differences.\n")
-    for r in results:
-        name = r["config"]["name"]
-        print(f"    [{name}]")
-        for cs in r["cluster_summaries"]:
-            cid = cs["cluster_id"]
-            sd = cs["subreddit_distribution"]
-            total = sum(sd.values())
-            dominant = max(sd.items(), key=lambda x: x[1]) if sd else ("?", 0)
-            purity = dominant[1] / total * 100 if total else 0
-            print(f"      C{cid} ({cs['size']} posts): dominant = r/{dominant[0]} "
-                  f"({purity:.0f}%), breakdown = "
-                  + ", ".join(f"r/{s}:{c}" for s, c in sorted(sd.items(), key=lambda x: -x[1])))
-        avg_purity = np.mean([
-            max(cs["subreddit_distribution"].values()) / sum(cs["subreddit_distribution"].values()) * 100
-            if sum(cs["subreddit_distribution"].values()) > 0 else 0
-            for cs in r["cluster_summaries"]
-        ])
-        print(f"      Average dominant-subreddit purity: {avg_purity:.1f}%\n")
-
-    print(f"  5) CLUSTER SIZE DISTRIBUTION\n")
-    for r in results:
-        name = r["config"]["name"]
-        sizes = r["metrics"]["cluster_sizes"]
-        size_list = [sizes[cid] for cid in sorted(sizes.keys())]
-        total = sum(size_list)
-        pct_list = [f"C{cid}:{s}({s/total*100:.0f}%)" for cid, s in sorted(sizes.items())]
-        print(f"    [{name}] {' | '.join(pct_list)}")
-        largest = max(size_list)
-        if largest / total > 0.5:
-            print(f"      WARNING: largest cluster contains {largest/total*100:.0f}% of all posts - "
-                  f"may indicate under-differentiation.")
-    print()
-
-    print(f"  6) COMBINED SCORING & RECOMMENDATION\n")
-
-    sil_vals = [r["metrics"]["cosine_silhouette"] for r in results]
-    db_vals  = [r["metrics"]["davies_bouldin"] for r in results]
-    ch_vals  = [r["metrics"]["calinski_harabasz"] for r in results]
-    std_vals = [r["metrics"]["cluster_size_std"] for r in results]
-
-    def safe_norm(val, vals, higher_better=True):
-        vmin, vmax = min(vals), max(vals)
-        if vmax == vmin:
-            return 0.5
-        normed = (val - vmin) / (vmax - vmin)
-        return normed if higher_better else (1.0 - normed)
-
-    scores = {}
-    for r in results:
-        m = r["metrics"]
-        sil_n = safe_norm(m["cosine_silhouette"], sil_vals, higher_better=True)
-        db_n  = safe_norm(m["davies_bouldin"],    db_vals,  higher_better=False)
-        ch_n  = safe_norm(m["calinski_harabasz"],  ch_vals,  higher_better=True)
-        std_n = safe_norm(m["cluster_size_std"],   std_vals, higher_better=False)
-
-        combined = 0.35 * sil_n + 0.25 * db_n + 0.20 * ch_n + 0.20 * std_n
-        scores[r["config"]["name"]] = {
-            "sil_norm": sil_n, "db_norm": db_n, "ch_norm": ch_n,
-            "std_norm": std_n, "combined": combined,
-        }
-
-    print("  Weights: Silhouette 35%, Davies-Bouldin 25%, "
-          "Calinski-Harabasz 20%, Balance 20%\n")
-    print(f"  {'Config':<10s} {'Sil':>6s} {'DB':>6s} {'CH':>6s} {'Bal':>6s} {'Combined':>9s}")
-    print(f"  {'-'*46}")
-    for name in [r["config"]["name"] for r in results]:
-        s = scores[name]
-        print(f"  {name:<10s} {s['sil_norm']:>6.3f} {s['db_norm']:>6.3f} "
-              f"{s['ch_norm']:>6.3f} {s['std_norm']:>6.3f} {s['combined']:>9.4f}")
-
-    ranked = sorted(scores.items(), key=lambda x: -x[1]["combined"])
-    winner = ranked[0][0]
-    winner_cfg = next(r["config"] for r in results if r["config"]["name"] == winner)
-    winner_metrics = next(r["metrics"] for r in results if r["config"]["name"] == winner)
-
-    print(f"\n  RANKING:")
-    for rank, (name, sc) in enumerate(ranked, 1):
-        marker = "  <-- RECOMMENDED" if rank == 1 else ""
-        print(f"    #{rank}  {name:<10s}  combined = {sc['combined']:.4f}{marker}")
-
-    print("\n  CONCLUSION")
-    print("  " + "-" * 76)
-    print(
-        f"  Recommended configuration: '{winner}' "
-        f"(vector_size={winner_cfg['vector_size']}, min_count={winner_cfg['min_count']}, "
-        f"epochs={winner_cfg['epochs']}, dm={winner_cfg['dm']})"
-    )
-    print("  Quantitative evidence:")
-    print(f"    - Cosine silhouette = {winner_metrics['cosine_silhouette']:.4f}")
-    print(f"    - Davies-Bouldin    = {winner_metrics['davies_bouldin']:.4f}")
-    print(f"    - Calinski-Harabasz = {winner_metrics['calinski_harabasz']:.1f}")
-    print("  Also review keyword lists, subreddit breakdowns, and representative")
-    print("  posts above for qualitative cluster coherence.")
-
-    print(sep)
-    return winner
-
-
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
-
 def main():
     parser = argparse.ArgumentParser(
         description="Lab 8 — Doc2Vec embeddings & clustering for Reddit posts"
@@ -832,7 +615,9 @@ def main():
         },
     ]
 
-    all_results = []
+    best_result = None
+    best_silhouette = float("-inf")
+
     for cfg in configs:
         print("\n" + "=" * 80)
         print(f"  CONFIGURATION: {cfg['name'].upper()}")
@@ -847,25 +632,24 @@ def main():
             df, docs, tokens, cfg, args.outdir,
             k=args.k, k_min=args.min_k, k_max=args.max_k,
         )
-        all_results.append(result)
 
-        out_path = os.path.join(args.outdir, f"doc2vec_{cfg['name']}.json")
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(result, f, indent=2, default=str, ensure_ascii=False)
-        print(f"  Saved JSON summary -> {out_path}")
+        sil = result["metrics"]["cosine_silhouette"]
+        if sil > best_silhouette:
+            best_silhouette = sil
+            best_result = result
 
-    plot_config_comparison(all_results, args.outdir)
-
-    winner = comparative_evaluation(all_results)
-
-    combined_path = os.path.join(args.outdir, "doc2vec_all_configs.json")
-    with open(combined_path, "w", encoding="utf-8") as f:
-        json.dump(
-            {"recommended_configuration": winner, "results": all_results},
-            f, indent=2, default=str, ensure_ascii=False,
+    if best_result is not None:
+        cfg = best_result["config"]
+        print("\n" + "=" * 80)
+        print("  BEST CONFIGURATION (by cosine silhouette)")
+        print("=" * 80)
+        print(
+            f"  {cfg['name']}  |  "
+            f"dim={cfg['vector_size']}, min_count={cfg['min_count']}, "
+            f"epochs={cfg['epochs']}, dm={cfg['dm']}  "
+            f"(cosine silhouette = {best_silhouette:.4f})"
         )
-    print(f"Saved combined results -> {combined_path}")
-    print("\nDone.")
+        print("\nDone.")
 
 
 if __name__ == "__main__":
