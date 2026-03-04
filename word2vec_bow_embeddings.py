@@ -129,3 +129,58 @@ def build_bow_vectors(tokens_list, word_to_bin, n_bins):
     if skipped_docs:
         print(f"NOTE: {skipped_docs} documents had zero countable words.")
     return vectors
+
+
+# Plot BOW Config Comparison Function (slightly different than doc2vec)
+def plot_config_comparison(results, outdir):
+    names = [r["config"]["name"] for r in results]
+    sils = [r["metrics"]["cosine_silhouette"] for r in results]
+    dbs = [r["metrics"]["davies_bouldin"] for r in results]
+    chs = [r["metrics"]["calinski_harabasz"] for r in results]
+    stds = [r["metrics"]["cluster_size_std"] for r in results]
+    colors = ["#4C72B0", "#DD8452", "#55A868"]
+
+    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+
+    ax = axes[0, 0]
+    ax.bar(names, sils, color=colors, edgecolor="white")
+    ax.set_ylabel("Cosine Silhouette (higher = better)")
+    ax.set_title("Cosine Silhouette Score")
+    ax.grid(axis="y", alpha=0.3)
+    for i, v in enumerate(sils):
+        ax.text(i, v + 0.003, f"{v:.4f}", ha="center", fontsize=9)
+
+    ax = axes[0, 1]
+    ax.bar(names, dbs, color=colors, edgecolor="white")
+    ax.set_ylabel("Davies-Bouldin Index (lower = better)")
+    ax.set_title("Davies-Bouldin Index")
+    ax.grid(axis="y", alpha=0.3)
+    # 
+    for i, v in enumerate(dbs):
+        ax.text(i, v + 0.02, f"{v:.4f}", ha="center", fontsize=9)
+
+    ax = axes[1, 0]
+    ax.bar(names, chs, color=colors, edgecolor="white")
+    ax.set_ylabel("Calinski-Harabasz (higher = better)")
+    ax.set_title("Calinski-Harabasz Index")
+    ax.grid(axis="y", alpha=0.3)
+    for i, v in enumerate(chs):
+        ax.text(i, v + max(chs) * 0.01, f"{v:.1f}", ha="center", fontsize=9)
+
+    ax = axes[1, 1]
+    ax.bar(names, stds, color=colors, edgecolor="white")
+    ax.set_ylabel("Cluster-Size Std Dev (lower = more balanced)")
+    ax.set_title("Cluster Balance")
+    ax.grid(axis="y", alpha=0.3)
+    for i, v in enumerate(stds):
+        ax.text(i, v + max(stds) * 0.01, f"{v:.1f}", ha="center", fontsize=9)
+
+    plt.suptitle("Word2Vec BoW - Cross-Configuration Comparison",
+                 fontsize=14, fontweight="bold")
+    plt.tight_layout(rect=[0, 0, 1, 0.96])
+    path = os.path.join(outdir, "config_comparison.png")
+    plt.savefig(path, dpi=150)
+    plt.close()
+    print(f"\nSaved comparison plot -> {path}")
+
+
