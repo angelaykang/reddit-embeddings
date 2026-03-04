@@ -36,9 +36,6 @@ else:
 nltk.download("stopwords", quiet=True)
 from nltk.corpus import stopwords
 
-_nltk_sw = set(stopwords.words("english"))
-STOPWORDS = _nltk_sw | {w.replace("'", "") for w in _nltk_sw}
-
 # Getting necessary functions from doc2vec_embeddings.py to avoid duplication and maintain consistency
 # Many of these functions were originally written in the reddit_forum_analysis lab.
 from doc2vec_embeddings import (
@@ -58,13 +55,6 @@ from doc2vec_embeddings import (
     plot_cluster_sizes,
     plot_per_cluster_silhouettes,
 )
-
-# MySQL Config
-MYSQL_HOST = os.environ.get("MYSQL_HOST", "localhost")
-MYSQL_PORT = int(os.environ.get("MYSQL_PORT", "3306"))
-MYSQL_USER = os.environ.get("MYSQL_USER", "root")
-MYSQL_DATABASE_NAME = os.environ.get("MYSQL_DATABASE", "reddit_forum")
-MYSQL_PASSWORD = os.environ.get("MYSQL_PASSWORD", "")
 
 # Set seed for reproducibility
 np.random.seed(42)
@@ -355,8 +345,8 @@ def main():
     parser.add_argument("--max-k", type=int, default=15,
                         help="Maximum k for auto-selection.")
     parser.add_argument(
-        "--outdir", type=str, default="w2v_bow_results",
-        help="Directory for plots and JSON summaries.",
+        "--outdir", type=str, default="word2vec_bagofwords_results",
+        help="Directory for plots and JSON summaries (default=word2vec_bagofwords_results).",
     )
     # Extra CLI args for word vector dims for binning, min word frequency, and w2v training epochs
     parser.add_argument(

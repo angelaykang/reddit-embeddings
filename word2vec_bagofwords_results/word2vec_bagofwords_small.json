@@ -1,0 +1,385 @@
+{
+  "config": {
+    "name": "small",
+    "n_bins": 50,
+    "w2v_vector_size": 150,
+    "w2v_min_count": 2
+  },
+  "k": 2,
+  "metrics": {
+    "cosine_silhouette": 0.26062968395549674,
+    "per_cluster_silhouette": {
+      "0": -0.0239210120585958,
+      "1": 0.4415168026251184
+    },
+    "davies_bouldin": 2.5408732809674683,
+    "calinski_harabasz": 574.3032856606984,
+    "cluster_size_std": 445.0,
+    "cluster_sizes": {
+      "0": 1553,
+      "1": 2443
+    }
+  },
+  "k_search": {
+    "k_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "inertias": [
+      1333.1809305029183,
+      1263.0268812363984,
+      1216.1990716229736,
+      1173.4145333896308,
+      1142.393685974287,
+      1114.4585933801757,
+      1089.9461470360122,
+      1064.5137550339216,
+      1046.6922455379731,
+      1027.1634575989144,
+      1012.5602809792284,
+      1000.7711246563447,
+      987.5488406238969,
+      975.757507821026
+    ],
+    "silhouettes": [
+      0.26062968395549674,
+      0.16132718088975512,
+      0.15813851047595176,
+      0.10401381563593226,
+      0.09869051234998046,
+      0.10875622325608074,
+      0.11483273595011359,
+      0.10948186616117626,
+      0.11404465575927179,
+      0.11866380822581786,
+      0.09329490214941288,
+      0.09837092268683977,
+      0.1014785693816018,
+      0.09383829014175989
+    ]
+  },
+  "cluster_summaries": [
+    {
+      "cluster_id": 0,
+      "size": 1553,
+      "mean_cosine_silhouette": -0.0239210120585958,
+      "top_keywords": [
+        {
+          "word": "data",
+          "count": 4294
+        },
+        {
+          "word": "science",
+          "count": 1891
+        },
+        {
+          "word": "job",
+          "count": 1065
+        },
+        {
+          "word": "scientist",
+          "count": 861
+        },
+        {
+          "word": "com",
+          "count": 839
+        },
+        {
+          "word": "experience",
+          "count": 769
+        },
+        {
+          "word": "https",
+          "count": 735
+        },
+        {
+          "word": "would",
+          "count": 633
+        },
+        {
+          "word": "learning",
+          "count": 594
+        },
+        {
+          "word": "role",
+          "count": 584
+        },
+        {
+          "word": "work",
+          "count": 551
+        },
+        {
+          "word": "jobs",
+          "count": 521
+        },
+        {
+          "word": "roles",
+          "count": 514
+        },
+        {
+          "word": "engineer",
+          "count": 497
+        },
+        {
+          "word": "looking",
+          "count": 490
+        },
+        {
+          "word": "analytics",
+          "count": 483
+        },
+        {
+          "word": "career",
+          "count": 450
+        },
+        {
+          "word": "utm",
+          "count": 445
+        },
+        {
+          "word": "years",
+          "count": 427
+        },
+        {
+          "word": "like",
+          "count": 422
+        }
+      ],
+      "subreddit_distribution": {
+        "datasciencejobs": 671,
+        "datasciencecareers": 658,
+        "cscareerquestions": 159,
+        "experienceddevs": 65
+      },
+      "representative_posts": [
+        {
+          "reddit_id": "1qnbsy5",
+          "subreddit": "cscareerquestions",
+          "title": "Is it too late for me to break into quant development?",
+          "selftext": "Hello everyone,\n\nI am an international undergraduate computer engineering student who just completed my first year of college and am taking a 2-year leave of absence due to military obligations. Although I managed to get into an Ivy League institution (not HYP), I do not feel that I am particularly strong at math or programming, as I have never practiced on Leetcode, and just began learning programming at the start of my freshman year. I feel very conflicted on my future career goals: a part of me wants to dedicate my years in college to landing a low-latency C++ developer role at a quantitative trading firm, while another part of me wants to take the relatively less competitive route and aim for an ASIC verification role, since I recently completed a college course and a paid online course on FPGA design. However, I feel that aiming for a quant developer role in 2026 is not a good idea for me for the following reasons:\n\n1. Due to agentic AI and other factors, junior software engineering openings have been greatly reduced. Once I graduate from college, entry-level quant development roles may become nonexistent.\n2. Quant developer roles are the most competitive roles in tech. I heard that a lot of applicants to these roles are IMO participants and STEM prodigies who have amassed significant experience in math and programming before college. Will I be able to compete with these people as a college student who just started learning programming in college?\n\nFurthermore, if I still have a chance at breaking into entry-level quant developer roles by the time I graduate, would getting a Masters or PhD be essential in breaking into quant in my situation? Or, would I still be able to land a quant developer role straight out of undergrad?\n\nAny career advice would be greatly appreciated."
+        },
+        {
+          "reddit_id": "1ozbun1",
+          "subreddit": "datasciencecareers",
+          "title": "Is it realistic for a fresher with weak fundamentals to upskill in Data Science and get a job especially in Indian IT market?",
+          "selftext": "Hi everyone, I\u2019m a recent BTech graduate trying to decide whether I should go into Data Science/AI/ML as my main career path.\n\nHere\u2019s my situation honestly:\n\n1) I know core Python basics, but I\u2019ve never used ML libraries or data frameworks.\n\n2) My problem-solving, DSA, and coding fundamentals are weak because I didn\u2019t practice much in college.\n\n3) I can understand concepts well, but implementing them is difficult for me right now.\n\n4) I see a lot of hype around Data Science/AI, but I also see people saying that fresher-level data roles are limited and require strong math + coding + real projects.\n\n5) I\u2019m confused whether, as a fresher with weak fundamentals, it\u2019s realistic to upskill in Data Science and still have a good chance of getting a job.\n\nMy questions:\n\u27a1\ufe0f Is Data Science a practical path for a fresher who is still weak in fundamentals but willing to learn seriously?\n\u27a1\ufe0f What skill level is actually expected from freshers in DS/ML roles?\n\u27a1\ufe0f If I put in 6\u201312 months of focused work, is it possible to become job-ready in DS/ML without prior experience?\n\nAny advice from people in the field would help a lot. Thanks!"
+        },
+        {
+          "reddit_id": "1ozbw6h",
+          "subreddit": "datasciencejobs",
+          "title": "Is it realistic for a fresher with weak fundamentals to upskill in Data Science and get a job especially in Indian IT market?",
+          "selftext": "Hi everyone, I\u2019m a recent BTech graduate trying to decide whether I should go into Data Science/AI/ML as my main career path.\n\nHere\u2019s my situation honestly:\n\n1) I know core Python basics, but I\u2019ve never used ML libraries or data frameworks.\n\n2) My problem-solving, DSA, and coding fundamentals are weak because I didn\u2019t practice much in college.\n\n3) I can understand concepts well, but implementing them is difficult for me right now.\n\n4) I see a lot of hype around Data Science/AI, but I also see people saying that fresher-level data roles are limited and require strong math + coding + real projects.\n\n5) I\u2019m confused whether, as a fresher with weak fundamentals, it\u2019s realistic to upskill in Data Science and still have a good chance of getting a job.\n\n\nMy questions:\n\u27a1\ufe0f Is Data Science a practical path for a fresher who is still weak in fundamentals but willing to learn seriously?\n\n\u27a1\ufe0f What skill level is actually expected from freshers in DS/ML roles?\n\n\u27a1\ufe0f If I put in 6\u201312 months of focused work, is it possible to become job-ready in DS/ML without prior experience?\n\nAny advice from people in the field would help a lot. Thanks!"
+        },
+        {
+          "reddit_id": "1m533zm",
+          "subreddit": "datasciencejobs",
+          "title": "MS in Data Science to Break $120K? Currently Making $92K as a Data Engineer \u2014 Worth the Debt?",
+          "selftext": "Hey everyone \u2014\nI\u2019m at a career crossroads and could really use some input from others in the field.\n\nI\u2019m a Data Engineer in Florida making $92K with ~4 years of experience (DE and DA roles). I\u2019ve worked at companies like ADP, DHL Supply Chain, FedEx, here\u2019s a quick snapshot of my background:\n\n\t\u2022\tLanguages: Python, R, Apache Spark, Pandas, DAX, SQL, JavaScript, PowerShell\n\t\u2022\tTools/Platforms: Power BI, Tableau, SSIS, SSMS, Toad, Excel, Snowflake, Salesforce, SolarWinds\n\t\u2022\tCerts: Azure Data Engineer Associate (DP-203), Power BI Data Analyst (PL-300)\n\t\u2022\tI\u2019ve built and deployed projects in forecasting (ARIMA, GARCH), dashboard automation, and data scraping (Google API)\n\nLately I\u2019ve been applying around and keep getting offers in the $90\u2013100K range, which doesn\u2019t feel like enough of a jump. I\u2019m considering getting a Master\u2019s in Data Science at Eastern University, hoping it\u2019ll help me:\n\n\t1.\tPivot more into DS/MLOps roles (I\u2019m into stats + modeling)\n\t2.\tBreak into the $120K+ salary range\n\t3.\tBoost long-term career ceiling\n\nThe program would put me ~$10K in debt, which is manageable but still significant. I\u2019m trying to figure out if the MS will actually unlock higher pay or if I\u2019d be better off continuing to build experience and projects without it.\n\nMy questions:\n\n\t\u2022\tWill the MS actually help me break into $120K+ roles? Or are there better routes to get there?\n\t\u2022\tHas anyone successfully made the DE \u2192 DS or MLOps transition without a graduate degree?\n\t\u2022\tIs the Eastern University program respected or just another credential?\n\nIf anyone\u2019s been in a similar spot or made the jump I\u2019m aiming for, I\u2019d love your insights. Thanks in advance!"
+        },
+        {
+          "reddit_id": "1ncbtf0",
+          "subreddit": "datasciencecareers",
+          "title": "Career Advice: Data Analyst (4+ years, Product-based) \u2013 Masters vs Certifications vs Technical Skills?",
+          "selftext": "Hello Readers,\n\nI\u2019ve been working as a **Data Analyst for 4+ years** with a product-based company, and I\u2019m at a point where I want to plan the next step in my career. My background is in **IT Engineering**, and my role so far has been heavily focused on analytics, reporting, and data handling.\n\nI\u2019m considering a few different paths and would love suggestions:\n\n* Should I **double down on technical skills** (advanced SQL, Python, ML, cloud, data engineering, etc.) to move toward senior analyst/data scientist roles?\n* Or would it be better to pursue a **Master\u2019s (Data Science, Analytics, or Finance-related)** to open global opportunities and leadership roles?\n* Another option I\u2019m considering is **finance-related certifications (such as CFA, FP&amp;A, FRM)** to combine data and finance, and move into financial analytics/strategy.\n\nMy long-term goal is to **enhance my career trajectory** (either into senior data roles, financial analytics, or even strategy/consulting). I\u2019m open to both **technical growth and the business/finance side**, but I'm unsure which path would give me the best leverage.\n\nWould really appreciate your thoughts or experiences if you\u2019ve been in a similar situation! \ud83d\ude4f\n\nThanks in advance."
+        },
+        {
+          "reddit_id": "1ock585",
+          "subreddit": "datasciencecareers",
+          "title": "Career shift advice: learning data science after working in biotech R&amp;D",
+          "selftext": "Hey everyone,\n\nI was recently laid off from my job as a Research Associate in a biotech company, where I mainly worked in the wet lab (cell-based assays, etc.). Lately, I\u2019ve been getting more and more interested in data science, partly because I\u2019d like to move away from the bench, but also so that if I do go back to a lab role, I can at least code a bit and analyze my data more efficiently (right now I have almost no coding background).\n\nMy company is offering to fund a training program of my choice, up to a maximum of $5,000. I know there are tons of free online resources out there, but since this would be financed by the company, I\u2019d like to go for a proper, certified course, ideally from a real university or a reputable institution.\n\nDo you have any recommendations for courses or programs?\nIdeally something that\u2019s useful in biotech, but also transferable in case I end up wanting to use those skills in another industry later on!\n\nThanks a lot for your suggestions and feedback"
+        },
+        {
+          "reddit_id": "1pgquad",
+          "subreddit": "datasciencejobs",
+          "title": "Looking for a data role after a short break. What\u2019s the best strategy right now? (UK/EU based)",
+          "selftext": "Summary:\n    \u2022 1 yr Data Analyst (Python, SQL, ETL, dashboards)\n    \u2022 1+ yr Developer Advocate (Kafka, streaming examples, docs, demos)\n    \u2022 MSc Big Data Science (UK)\n    \u2022 Open to: Data Analyst, Junior Data Engineering, Technical Writing for data tools\n\n\n\nHi everyone. I\u2019m trying to get back into a data role and I\u2019d really appreciate some straightforward advice from people who\u2019ve been through the job hunt recently.\n\nI worked for about a year as a data analyst (Python, SQL, ETL, dashboards) and then around a year as a developer advocate for data streaming tools (mainly Kafka). So my background is a mix of analytics + technical communication/content for backend/data platforms.\n\nI took a break due to health issues (around 10 months). I\u2019m doing fine now and able to work normally, but I need to secure a role fairly soon, and I\u2019m not sure what the most realistic approach is right now given how slow the market feels.\n\nI\u2019m based in the UK and open to data analyst roles, junior data engineering roles, and also technical roles that involve writing or building tutorials for data tools (docs, demos, pipeline examples, streaming content, that sort of thing). I\u2019ve shared a small summary below so people don\u2019t have to click links:\n\nPortfolio (projects + demos):  \n[https://rockys-project.github.io/](https://rockys-project.github.io/?utm_source=chatgpt.com)\n\nI know this sub gets a lot of job-seekers, so I\u2019m not asking anyone to \u201cget me a job.\u201d I just want to know what you\u2019d do in my situation. For example: would you prioritise contract roles, referrals, or applying directly for junior DE roles? And how would you briefly mention a medical break without turning it into a story?\n\nAny blunt or practical advice is welcome. Thank you."
+        },
+        {
+          "reddit_id": "1mvq3kh",
+          "subreddit": "datasciencejobs",
+          "title": "Hey hiring managers \u2014 Data Analyst here (banking + healthcare) looking to break into Data Science / ML Eng",
+          "selftext": "Hey folks,\n\nFigured I\u2019d shoot my shot here. I\u2019ve been working as a Data Analyst in the banking and healthcare space, wrangling data, building dashboards, writing endless SQL queries, and making sure the business folks have the insights they need. It\u2019s been great, but now I\u2019m ready to take the next step: moving into a Data Scientist or ML Engineer role.\n\nA bit about me:\n\t\u2022\tComfortable with Python + SQL (my daily drivers)\n\t\u2022\tSolid foundation in DSA (I keep up my problem-solving chops)\n\t\u2022\tHands-on experience with AWS and CI/CD in data workflows\n\t\u2022\tStrong domain experience in finance and healthcare, where data quality and compliance actually matter\n\nBasically: I\u2019ve got the analyst background, the coding chops, and I\u2019m hungry to apply ML in the real world.\n\nIf you\u2019re a hiring manager lurking here (or know one), and are looking for someone with a solid base who\u2019s eager to grow into Data Science / ML Eng, I\u2019d love a chance to chat. Resume/portfolio happily shared if interested.\n\nAlso open to advice from folks who\u2019ve made this transition \u2014 what helped you the most?\n\nCheers, and good luck to everyone else grinding on the job hunt \ud83d\ude4c"
+        },
+        {
+          "reddit_id": "1nik5oe",
+          "subreddit": "datasciencejobs",
+          "title": "My university switched my major from Software Engineering to Data Science. What should I do?",
+          "selftext": "Hi everyone,\n\u200bI'm feeling lost and would appreciate some advice. Throughout my high school years, I've been focused on software development, building websites, apps, and even working with Arduino. I've always been passionate about Software Engineering and preparing myself for that specific field.\n\u200bI was planning to pursue Software Engineering at my university, but I just found out that my international track only offers a Data Science major. This sudden change has put me in a tough spot. I'm worried about the heavy focus on math and statistics in data science, and I'm not sure if it's the right fit for me.\n\u200bMy main questions are:\n\n\u2022 \u200bIs the difference between Software Engineering and Data Science significant enough that it would completely change my career path? Can I still work as a software engineer with a degree in data science?\n\n\n\u2022 \u200bShould I consider transferring to another university that offers a Software Engineering program (even though it will take a year or so), or should I stick with my current university and major in Data Science?\n\u200b\n\u2022  Is the coding in Data Science so different that I'd struggle to learn Software Engineering on the side?\n\n\n\u200bAny advice from people in the industry, especially those who have made a similar switch, would be incredibly helpful.\n\n**Update**: They said after 2 years of (pr\u00e9paratoire) in the Engineering cycle I could switch to the normal path and study SE in French\n\nShould I go with that?"
+        },
+        {
+          "reddit_id": "1mklk6p",
+          "subreddit": "datasciencecareers",
+          "title": "Complete career change, education question",
+          "selftext": "What's the quickest and cheapest way to become adequately qualified to be hirable for an entry-level position in data science or data analytics, if you have a completely unrelated bachelors degree and no industry experience (in 2025 in WA, USA)?? \n\nI'm a registered nurse with a Bachelor of Nursing, currently working for an insurance company (as it was the only way to get out of the clinical arena) and I want to pursue a career as a data scientist. \n\nSince I already have a Bachelor's degree, albeit completely unrelated, can I just do a Masters in Data Science? Are there any bridging/beginner-friendly Masters programs for those without comp sci or data science backgrounds you can recommend? \n\nWould it be worth doing a Codecademy/other online bootcamp program instead or before attempting the Masters? \n(I have done a couple of super short free online courses that mean nothing professionally/academically but did reinforce my desire to pursue this) \n\nAs my current job is extremely demanding with a lot of OT required, with no option to reduce hours, and I'm a single mom, I cannot study and work concurrently so I've spent a couple of years preparing to quit my job to study full-time for a year or two. I'm also in my 40s, so while I am keen for a new career, I would also like to retire before I'm in my grave, so I don't want to spend a decade on just foundation education. \n\nWhat do you think is best pathway?\n\n(Thanks in advance for your experienced and knowledgeable help and advice \u2665\ufe0f I haven't had much luck finding info for my circumstances)"
+        }
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "size": 2443,
+      "mean_cosine_silhouette": 0.4415168026251184,
+      "top_keywords": [
+        {
+          "word": "like",
+          "count": 2401
+        },
+        {
+          "word": "work",
+          "count": 1877
+        },
+        {
+          "word": "data",
+          "count": 1855
+        },
+        {
+          "word": "job",
+          "count": 1739
+        },
+        {
+          "word": "would",
+          "count": 1612
+        },
+        {
+          "word": "time",
+          "count": 1486
+        },
+        {
+          "word": "get",
+          "count": 1451
+        },
+        {
+          "word": "code",
+          "count": 1187
+        },
+        {
+          "word": "company",
+          "count": 1144
+        },
+        {
+          "word": "people",
+          "count": 1121
+        },
+        {
+          "word": "team",
+          "count": 1119
+        },
+        {
+          "word": "one",
+          "count": 1113
+        },
+        {
+          "word": "know",
+          "count": 1105
+        },
+        {
+          "word": "want",
+          "count": 1036
+        },
+        {
+          "word": "years",
+          "count": 1025
+        },
+        {
+          "word": "really",
+          "count": 1013
+        },
+        {
+          "word": "experience",
+          "count": 1005
+        },
+        {
+          "word": "also",
+          "count": 985
+        },
+        {
+          "word": "even",
+          "count": 921
+        },
+        {
+          "word": "new",
+          "count": 906
+        }
+      ],
+      "subreddit_distribution": {
+        "experienceddevs": 936,
+        "cscareerquestions": 842,
+        "datasciencecareers": 338,
+        "datasciencejobs": 327
+      },
+      "representative_posts": [
+        {
+          "reddit_id": "1pzomx8",
+          "subreddit": "datasciencecareers",
+          "title": "Early/Mid-Career Jack of All Trades, Master of None. What Next? Need Advice.",
+          "selftext": "Hi, all. I'm a 30 year old data scientist at a bit of a career crossroads who really could use some advice on where to go from here from anyone with any sort of perspective. [Here is a link to my LinkedIn profile for reference](https://www.linkedin.com/in/zane-dennis/), but to summarize my career so far:\n\n* After an undergrad in bioinformatics, I got a master's in data science, focusing mostly on machine learning and math, from a really good school in 2018-2020. I worked with all manner of then-SOTA technology from convolutional neural networks for computer vision to GloVe embeddings for NLP and more. Was incredibly intense, but I survived.\n\n* Got a stopgap job doing data labeling and some basic Python automation for a big tech firm until the pandemic job market settled down a bit.\n\n* Worked my first actual data scientist job for a year doing SQL-and-Jupyter-Notebooks ML modeling for a health care data analysis company. This employer was kind of a clusterfuck, and I was the closest thing to an ML expert on the team even though I was the entry-level new guy, so I didn't learn anything there. Moved on as quickly as I could.\n\n* Spent a couple years at a health care data startup that I really liked but unfortunately got laid off from when the company hit some financial difficulties at the same time the \"use AI instead of employing humans\" thing started really booming. Worked with some absolutely brilliant and amazing people there, but the downside was that I was bottom of the totem pole so I got stuck mostly writing docs and adding fields to data models. Very important and necessary work that I was willing to do at the time because I believed in the team, the company, and the product, but it didn't do my resume much good beyond a little experience cloud computing with DataBricks (which I barely touched directly because most of our work was with in-house tools built by the senior-level geniuses).\n\n* After the layoff, I landed a \"decision scientist\" contract at a health insurance company that was sold to me as a \"communication-heavy\" role where I'd be writing and presenting a lot of reports to decision-makers but in reality turned out to be more of a \"digital errand boy\" role to my micromanaging boss who ironically was a terrible communicator, and I never got to actually communicate anything myself. Got some good SQL practice here and touched BigQuery enough to mention it on the resume, but once again I feel like I moved backwards, not forwards, skill/resume-wise here. My contract there ends tomorrow (end of calendar year), and I wouldn't renew there even if I could, so I'm on the job market once again.\n\nMy career Plan A had always been to build a career on machine learning, but I'm encountering two big obstacles:\n\n1. Despite being 5 years into my career, I have never gotten the opportunity to build a machine learning model in a \"prod\" environment, and that's the #1 thing I've always been told you need to move up to mid-senior levels as a data scientist.\n\n2. It feels like all the data science hiring right now is for LLMs/RAG/etc, not traditional machine learning, and I'm just not very interested in LLMs for a variety of reasons.\n\nSo after the way my early career has gone, I feel *less* qualified for good jobs than I did 5 years ago when I first graduated. As you might be able to tell from my tone at times, I'm pretty pessimistic about my resume, though I do know how to put on the mask and sell myself once I do get into interviews. I tend to have pretty good luck converting recruiter calls into interviews and interviews into more interviews.\n\nMy real challenge is not just getting initial interviews; it's figuring out what interviews I even *want* to get next. I want to take a more active role in shaping the future of my career, but I'm not sure what to shoot for. I've always been a bit of a generalist with moderate skill at all of ML, SWE, domain knowledge (health care), dataviz, and communication skills, but I get the impression that in order to advance in my career I might need to actually specialize in something. Here's the possible options I've come up with:\n\n* ML or generalist data scientist (the original Plan A): I'd be the most qualified for this (or at least I used to be?), but it feels like this is the most competitive type of job to get and has fewer and fewer openings each year. I do have the \"hasn't pushed a professional model to prod\" resume gap, but I'm hoping that's something I can cure with a personal project this month to shake off the rust.\n\n* ML Engineering/data engineering/cloud computing: I think this would be the easiest specialty for me to pivot to skill-wise, given my extensive experience with infrastructure coding, ETL, and just general software engineering skill that a lot of pure data scientists don't have. Also feels like something that has a better ratio of job openings to seekers. The issue I'm seeing is experience with specific technologies. Most of the postings I've seen really want someone with extensive experience in certain platforms like Azure, and that experience is hard to get outside of an existing corporate environment. I tried to do an Azure certification tutorial last year, and it just straight up did not work for a personal account that wasn't tied to a corporate account or something. Are other cloud platforms easier to learn on a personal account?\n\n* Cybersecurity: I have no experience with this whatsoever, but it seems like one of the few fields out there with growth potential, especially for someone who is a native-born US citizen. And of course has that coolness factor of something that I think I might enjoy.\n\n* Healthcare BI: I'm not sure what to think about this. I'm successfully established as a health care data science guy so far with all the right resume keywords to signify domain knowledge, but from what I hear this domain is just wayyyyy more interested in and gets more mileage out of basic dataviz (mostly PowerBI) than out of any sort of ML/advanced data science. I fear I would find the PowerBI stuff comparatively boring and get paid a lot less for it, but the upside might be getting to work in a field I care about (health care on the provider side rather than the insurance side) and possibly some upward mobility towards decision-making roles, not just coding roles.\n\nTLDR:\n\nIn summary, I've been a career DS generalist \"willing to do the boring/dirty work and not just the sexy stuff\" guy so far, but in order to get better jobs I'm suspecting I might need to actually specialize in something sexy. Here are the biggest questions I have if anyone here has any perspectives to share:\n\n1. Are there still jobs out there for building traditional ML models that aren't mostly LLM-related? If so, what upskilling can I do during my employment gap here that will help me get one? And specifically, what's the best way to learn and use cloud technology outside of a corporate environment?\n\n2. If I do a solo project to upskill, what is the best way to advertise/use that on a resume/LinkedIn?\n\n3. Of the possible specialties I identified above, how realistic are they to pivot into, how does one go about learning the necessary skills, and what are careers in those paths like? How far \"backwards\" would I have to step in order to make the pivot?\n\n4. Regardless of what specific jobs I look for, what does \"active job searching\" even look like right now? Almost every interview I've gotten in the last ~3 years has come from a headhunter agency recruiter DM-ing *me* on LinkedIn instead of vice versa. I tried to work my network of connections last year, but nothing worked out there. Was that just a fluke or a skill issue, or is it a universal experience that even networking doesn't seem to pay off any more? Are there specific situations or niches where cold online applications still work?"
+        },
+        {
+          "reddit_id": "1qn9mxh",
+          "subreddit": "experienceddevs",
+          "title": "\"Pedantic\" or \"particular\" devs - or those with experience with them - can you help?",
+          "selftext": "Hello reddit experienced devs.  I am by my own admission, a pedantic ~~dev~~ person.  \"Particular\", \"fussy\", you choose the word.  \"Anal\" if you want to be a bit more blunt ;)  And, in the areas I think this is a fault and to my detriment, I would like to do better.\n\nTLDR:  I have a few years on me, and in ways I am the tech lead, but not the *team* lead.  I have a colleague who is less experienced and wired differently (surprise, surprise; we're different people).  I've observed certain behaviours and ways of approaching things from this person that both concerns and frustrates me.  I'm quite fussy, but I *have* been trying to pull that back in favour of harmony, and accept delivering at a level that is \"good enough\".  I've attempted to set up processes and standards to try and encourage certain thought processes and behaviours, and quality.  But, it's becoming harder to suppress the stress and frustration levels I feel from the kind of work I see.  Can anyone offer strategies I can try, or ways to approach this - before I damage my health and job standing?\n\n\\--\n\nI've been in dev for about 10 years total, in data engineering for the last 7.  I'm the most senior in my 2-person team of engineers, and fulfil a tech lead role.  Colleague has 3-4 YoE.  A bit over a year ago we got a new manager, who is more business-y than tech-y.  That balance has been alright, it's enabled me to step up.  For a few years now we've been extending the team with external contractors/consultants for projects.\n\nAbout two years ago, I started putting more processes in place and encouraging standardisation, such as DevOps and git, data object metadata, how we even go about developing our stuff.  Just generally trying to tighten the range of differences in implementations, documentation/context, and even quality between one product and another.\n\nBut even with writing up standard processes, calling out naming conventions, discussions during PR reviews; I still see stuff that I consider \"sloppy\".  Untidy code and files; ad hoc/inconsistent titles for PRs; context-lite commit messages and PR descriptions; annotations (descriptions) on data objects (tables, views) that are potentially business-facing with typos and are just a bit \"off\".  I think I have enough self-awareness to know some of this comes from a place of \"it's not how I would do it\", and I accept that.  But, some of this stuff could have actual impacts on quality, if not just future maintenance for someone else.  And *to me*, some of it seems implicit with being a professional developer - giving a crap about the quality of the work you do, and doing a bit to make it easier for someone else to pick it up.\n\nI've raised aspects of what bothers me with my manager; and they're on board, to a point.  But I think some of the scale is lost on them as they don't \"live\" so much in the technical design phase, and certainly not the code or the PRs.  I also find it hard to separate what matters, over what simply pisses me off.\n\nTo those who share in being pedantic, particular, or picky, to whatever extent - or to those who have successfully worked with someone with these kinds of traits - how do you make it work?\n\n\\---\n\nEDIT: A few adjustments above.  Using \"objects\" and \"annotations\" was perhaps a bad choice.  With \"objects\" I meant *data objects* like tables and views, and with \"annotations\" I meant descriptions.  And these descriptions aren't just for engineers, they're for business analysts as well.\n\nI don't expect PR titles, descriptions, and commit messages to form documentation.  I do have some measure of expectation that they make it easy to follow, at a glance, what changed, hopefully why, and from what branch to what branch changes were going.  This is one area where I think I'm nitpicking or trying to impose some dogma, and can probably be tackled a different way.\n\n\\----\n\n  \nEDIT again:  It's been a couple of days and a lot of people have already commented, so it's a late edit.  It's also a lengthy one.  I'm not a long-time redditor so I might be committing a reddit sin.  I'll make it anyway for anyone who comes by afterwards.  **Thank you for all the responses and I appreciate the perspectives.**  My mindset has shifted some in the last couple of days from my own reflection, reading through this, and some good discussion with my manager.\n\n\n\nI'm trying to let go of what is personal preference when it comes to pushing back or mandating things - pick your battles - unless it aligns with the business and team, of course.  I kinda knew this was one of the only ways to deal with the part of this that is *personal*, but it's validating that it is a common piece of advice.  For other things, I'll think about what can be automated or templated.  For the processes, standards, and conventions - it's time to review anyway, and I will push to collaborate more.\n\n\n\nThere have been a lot of comments about my mention of PRs and commit messages, and that it's generally ridiculous to think you can mandate that, or perhaps expect a certain level of quality - because people are people.  I get that.  I want to add now that these were just items on my laundry list of peeves, and not in of themselves, the biggest items.\n\n\n\nI brought up PR titles because I consider them as having value in tracking and forming history.  I write them in a certain way that makes it easier (IMO) to gather information at a glance in the Azure DevOps Repo UI.  I *encourage* (that's the word I've used) following \"my way\" for those reasons.  I don't mandate it, and I don't reject PRs for it.  If it's a PR to merge dev to main where I'm reviewer not author, when I'm in there for review, I'll tend to update the title myself if it \"needs\" it.  I'll leave an *informational* comment that I did so, with my reasons.  In that way maybe the idea spreads.\n\n\n\nI brought up commit messages because, like PR metadata I've seen from my colleague, I don't rate the messages highly for supporting history and context (by which I mean the *why* not just the *what* or *how*).  It has been commented here that PRs and commit messages aren't necessarily for holding a lot of context, because of tickets.  *Fair enough*.  However, the lower context I perceive is *not* augmented by more context in our IT ticketing system or ADO work items.\n\n\n\nOur stakeholders/internal customers raise projects/tickets with us and give us the *business* context.  From what I am across of this colleague's work, capturing *technical* context of design and development *beyond code* is generally missing.  They don't seem to be creating any or meaningful tickets breaking down a feature, which can provide context to changes.  Or if they do, they don't confidently speak to it, and it's not in a shared team space.  It makes me question a number of things.  And then, I probably start being picker about practices and PR reviews."
+        },
+        {
+          "reddit_id": "1qnrffo",
+          "subreddit": "cscareerquestions",
+          "title": "Junior Dev New Job Feeling Lost",
+          "selftext": "Today is beginning of my third week in my new job as a junior SWE. While I am beyond grateful and happy to have achieved this goal of mine I\u2019m feeling confused and lost.\n\nI am on a small team of developers in a large company where I have one other dev who works directly on my area of focus: we are the backend team of a large application development team. I assumed this would be my go to person/senior. However this person does not give me tasks or really communicate with me at all. If I ask questions they answer them, but they delegate nothing to me nor have they taken anytime to explain how our services work-basically our only communication we have is if I reach out with a question. I am okay with working independently and figuring things out but it feels super weird to sit in silence and to wonder what I should be doing besides familiarizing myself with our codebases.\n\nI finally managed to suggest something small to do to them, add some additionally error handling to an api + some unit tests and they just said go ahead and submit a PR and I\u2019ll review. The PR hasn\u2019t been reviewed yet after 4 days. \n\nI have a manger that is the manger for the whole dev team but not technical, and he told my priorities should be getting api x working, which it is and then to begin work on brand new service.\n\nWe don\u2019t use JIRA or anything of the sort either. Has anyone been in a situation like this before? Am I being paranoid as it\u2019s still so early into my new job? Any advice would be appreciated!"
+        },
+        {
+          "reddit_id": "1qgsvbp",
+          "subreddit": "experienceddevs",
+          "title": "What are things that can be done to up-level yourself to be competitive for hiring in roles today while working?",
+          "selftext": "I am pretty fortunate to be working in an AI company but I do not work specifically in an AI/ML role (I am an SDE role though fullstack). I'm going to be honest while I work hard at my company and I like to think I am not in a bad spot, I was laid off a few years ago and I don't want to be in a poor position if something happens (another lay off, random cuts, etc). \n\nI was curious what people do to up-level themselves. Do ya'll just stick with leet code in your spare time, tackle side projects, or something else? What's your schedule in doing those things? I find it hard to juggle my actual work (to be quite frank people at my company work on weekends), my personal life with family, while also focusing on my career development. While the natural answer is probably to find opportunities within my current company, that can be difficult sometimes. (For my situation, its hard to move out of your immediate area unless justified but my team\u2019s roadmap is very full)\n\nI feel like digging deeper into the ML or applied AI space is something that would benefit me but I'm not sure if it's something that a simple side projects would help when it comes to standing out from other folks (I assume a lot of AI and ML roles require math-heavy education, etc)\n\n  \nThank you for your time and any advice (or just perspectives) appreciated"
+        },
+        {
+          "reddit_id": "1q8946l",
+          "subreddit": "experienceddevs",
+          "title": "Thoughts after 5 years in software: looking for insight from more experienced devs",
+          "selftext": "Hello everyone,\nI wanted to share some thoughts and get your perspective.\n\nI\u2019m a software developer with about 5 years of experience. Early in my career I was very motivated and strongly believed that, by rigorously applying software engineering principles, I would eventually reach a solid level of control over the systems I was building. Clean code, logical models, separation of concerns: the goal was to reduce entropy as much as possible.\n\nIn the first years I made simple mistakes: I studied them, improved, and could clearly see progress. Over time, however, I started noticing a recurring pattern: there is always something that\u2019s not quite right. Not necessarily critical bugs. Sometimes it\u2019s a small UI detail, sometimes a requirement interpreted differently by the client. Each time you raise the bar, add more checks, learn, improve\u2026 but the loop never really ends.\n\nWhat I struggle with the most is not the request itself, but the feeling it triggers. Even when the work is objectively correct, when I\u2019m asked to \u201cfix\u201d something \u2014 even a very minor detail \u2014 I experience it as a kind of micro-failure. Rationally, I know iteration is normal, but emotionally that request reopens something that, in my mind, was already closed.\n\nOver time I\u2019ve also realized that much of the theory I once internalized as \u201claw\u201d is actually highly heuristic. Working under tight deadlines, on legacy systems inherited from others and poorly designed, theory only partially fits reality. The gap between the ideal and the real always remains visible.\n\nAfter years of thinking that I just needed to keep improving my skills, I\u2019m starting to believe that a certain amount of chaos is intrinsic to the field itself. I\u2019m not questioning the importance of professional growth \u2014 I\u2019ll definitely keep doing that \u2014 but it seems to me that software, by its nature, never really allows for total control or a true sense of closure.\n\nDo you relate to this experience?\nDo you ever experience requests for adjustments as a sense of incompleteness or failure, even when the work is done well?\nIs this something that fades with time, or does it simply change in how you learn to live with it?\n\n\n@note: Thanks to everyone for the advice, you\u2019ve been genuinely helpful. Some of these comments are deeper than what I usually see in psychology subreddits."
+        },
+        {
+          "reddit_id": "1mda3dc",
+          "subreddit": "datasciencejobs",
+          "title": "Offer decision",
+          "selftext": "Hi, first of all I apologize if this isn\u2019t the right sub to post this, for my English (as it's not my first language), and for any mistakes since I am new posting.\n\nI'm writing here to ask for advice regarding a decision I need to make between two offers I've received. I'm unsure which one to take, as I\u2019m trying to evaluate how each could benefit me in the future.\n\nTo give some context, I have a BSc in Computer Science and worked for a year as a Software Engineer. During that time, I became interested in data, so I decided to leave my job and enroll in a Master\u2019s in Data Science, from which I recently graduated. During the program, I was particularly interested in subjects related to Big Data and Cloud, more so than ML and DL. Then I started to see Data Engineering as a great career path, since I think it combines my previous software engineering skills with data, and I\u2019m also quite interested in architecture.\n\nNow, about the two offers:\n\nOn one hand, I received an offer from a tech consultancy focused on data. It\u2019s aimed at recent graduates and includes a short training period in technologies like Scala and Spark, after which you start working on a client project. I like that this offer is very focused on people wanting to pursue a Data Engineering career, which really appeals to me. It also offers full remote work, which I appreciate (although I\u2019d also like the option to go to the office and meet people). From what I\u2019ve seen, over time you can progress toward a Data Architect role, which I also find interesting.\n\nHowever, most of the people who have been part of this program in previous years seem to come from non-tech backgrounds or bootcamps, and managed to get in with minimal justification. In fact, when I got the offer call, they told me I was one of the most qualified candidates they\u2019d seen in terms of education and IT experience, which made me a bit skeptical. Another downside is that this offer pays less than the second one, and I might end up being subcontracted to the same client that the second offer comes from.\n\nThe second offer comes from a well-known bank in my country. After going through several processes, I was offered the position of \"Data Scientist Analyst\", and they told me I could choose the department that interested me most. I chose the Engineering department because it seemed the most appealing, and they mentioned that they work closely with other Data Engineers and Architects. Even though they mentioned some technologies I\u2019m familiar with (Python, SQL, PySpark, Git, BigQuery, CI/CD), it still feels like the role is more data science\u2013oriented than engineering.\n\nThe positives are that the bank pays more and has better benefits overall, and it could add some prestige to my cv even if the experience isn\u2019t exactly what I\u2019m looking for. On the downside, I'm required to go to the office 3 days a week, and it\u2019s quite far from where I live by public transport. If I want to drive there, I\u2019d have to wake up very early to avoid traffic and not lose my whole day. Also, from what I\u2019ve read and seen from others working there, the role seems very focused on ML, which doesn\u2019t excite me that much, I actually got Little bit bored of it during the Master\u2019s. But then again, maybe working on ML in a real job is very different from studying it in university, so it might turn out to be more interesting than I expect.\n\nThat\u2019s why I\u2019m unsure whether I should take the first offer or take a chance on the second one, see if I like it, and if not, try to pivot to a more suitable project/ department or job in the bank, and leave with some experience if it doesn\u2019t work out. I feel like if I reject the bank now, I probably won\u2019t get another chance to work there in the future.\n\nSo I\u2019m looking for opinions and different perspectives from others, because honestly, I feel a bit lost and don\u2019t really know which path to take since nowadays Data Engineering seems more appealing.\n\nAgain, sorry because probably I forgot to mention so many details, either way I\u2019ll be happy to answer questions you might have."
+        },
+        {
+          "reddit_id": "1l9ovq1",
+          "subreddit": "datasciencejobs",
+          "title": "Chasing product data science \u2014 love for experimentation, metrics, and clarity. Hoping someone can help me land a shot.",
+          "selftext": "Hey all,\n\nI don\u2019t usually post, but this felt like the right place.\n\nI\u2019ve been on this journey for a while now. I have a Master\u2019s in Data Science (USA) , and I\u2019ve spent the past year diving deep into the kind of work that brings product and data together. Things like A/B testing, causal inference, designing clean experiments, and understanding why a metric really moved, that\u2019s where I feel most alive.\n\nI\u2019ve applied to more jobs than I can count, probably well over 2,000 by now. I\u2019ve gotten close. I made it to final rounds at Meta and Thumbtack, got verbal offers, and then saw them fall through late in the process. That was tough. But I haven\u2019t lost my fire.\n\nPreviously, At Nokia, I worked on internal tools like machine learning to improve search, dashboards to help teams make faster decisions, and analytics that people actually used. I\u2019ve been in the weeds with SQL, Python, was a part of new feature kick-offs and ran tons of experiments that actually made it to the final product and I genuinely enjoy the process. The curiosity, the iteration, the clarity that data can bring when used right. I\u2019m also certified in DS and ML from Microsoft, AWS and IBM.\n\nAll I want now is a team that values this kind of product-driven thinking. I\u2019m not looking for a shortcut or a title, just a real opportunity. I know that if someone gives me that, I\u2019ll show up fully, and I\u2019ll deliver.\n\nIf you work somewhere that\u2019s hiring for product DS, experimentation, or growth analytics, (USA only) and you\u2019re open to referring or just passing my name along; I\u2019d be truly grateful. I\u2019ve put in the work. I just want a shot to prove it.\n\nYou don\u2019t have to trust me. Please have a conversation with me first about DS, about tech. I can assure you that this passion of mine is as genuine as it is.  \n\nPlease DM me if you\u2019re aware of any opportunities and I will be more than happy to provide additional information. I really need your help.\n\nThanks for reading. And if you\u2019re out there in the same cycle, keep going. We\u2019ll get there."
+        },
+        {
+          "reddit_id": "1qzr9gi",
+          "subreddit": "cscareerquestions",
+          "title": "Change of role and corporate political games, what would you do?",
+          "selftext": "Hi, I'm a Cloud Data Engineer with 5 YOE, up until now my work has been quite traditional, i've worked with ETL and ELT, recently I even began my \"seniorship path\" by forming a couple new resources in the team and managing by my own several projects with a quite difficult stakeholder.\n\nEverything was (more or less) fine. The problem started recently, where my manager decided that I have to learn Business Intelligence, in particular how to make dashboard (a task that I hate and I'm really bad at since I have basically zero aesthetic sense), in order not to present my job to internal stakeholders, but to sell them outside the company (and this worries me A LOT, I spoke about this with my internal stakeholder and he seemed worried too).\n\nMy perception about why this did happen was that the head of data made some terrible choices that burned out the budget and now they have to find a way to save money (about 60% of the BI team left not being replaced recently).  They'll probably to sell this transition as a new way to intend the Data Engineering job, compliant with our target company model.\n\nNow I'll soon have to speak with my manager about this, I'll for sure tell him that I'm not ok with this, and that I expected to proceed in a more managerial path, rather than taking on more technical work, that I cannot do and I'm not brilliant with. But I fear that this won't make any changes. \n\nSo what would you do in my place?\n\nI thought about:\n\n1. Leaving the company (the market isn't as bad as in the US, so it's not out of questions, but i still would like to have an offer first)\n2. Take a step back and ask for part-time trying to use the free time to land some other job (perhaps freelance or something different)\n3. Go to HR, tell them that I'm not anymore happy with my position and see if there's something else available withing the company.\n4. Comply and see what happens (if they will fire me, they'll have to give me an exit bonus)\n\n\n\nTL;DR\n\nAs a Data Engineer forced to take on even Business Intelligence tasks due to corporate politics. I hate them and I suck at them. What would you do in my place?"
+        },
+        {
+          "reddit_id": "1m31ik9",
+          "subreddit": "datasciencecareers",
+          "title": "Three years as a Data Scientist. Stuck doing PoCs. Do you mostly do PoCs too?",
+          "selftext": "I would like to know how its been in the industry for you all as data scientists. Would love to read about your experiences, challenges, learnings. Here's my background, and the problem that I am facing. I am 28. Based in India. I have a masters degree in Industrial Mathematics. I began my career as a data scientist in 2022. It was a start-up, and the initial six months were all about getting hands-on with SQL, Python, GCP Bigquery, Data Studio (now Looker).\n\nI have always been inclined towards research and development. Always wanted to find/read new things and figure out how it can be implemented to solve real-world problems. With this mindset, in 2023 and 2024 I was constantly reading new things and trying to implement them. Here's a rough list -\n\n1. How to automate the process of choosing the number of clusters in K-Means\n2. How to automatically determine if a dataset can be clustered at all\n3. How to mine interactions among features using boosted linear regression\n4. Came across Marketing Mix Modelling and studied Google's LightweightMMM thoroughly.\n5. Learned about recommender systems and built one.\n6. Built a natural language to analytics bot using Google Gemini\n\nWhile all these things gave me a ton of exposure, none of these things were pushed to production. It felt as if I just learned new things, but could not make any impact to any client/business.\n\nIn the March of this year I switched to a bigger organization where they offered me a managerial position. Four months into this new organization and nothing has changed for me work-wise. I built a bunch of MMMs that did not go to production because the data was too small. Now I have the data with a higher frequency but the MMMs built on it are of no use as they show no contribution of marketing to the business KPI.\n\nTo be honest, its not the process of learning that I have a problem with. In fact, I love it! However, the fact that I have not delivered a production-level data science project makes me think if I am even doing it right.\n\nI would love to hear from you guys and am eager and open to all the suggestions. If its about choosing the right organization to work with, I would appreciate if you can guide me about how to screen for such organizations.\n\nI hope this rant is permissible here. Sincerely looking for guidance. Thank you all."
+        },
+        {
+          "reddit_id": "1pj7y6l",
+          "subreddit": "experienceddevs",
+          "title": "Move from App/Software Architecture to Enterprise Architecture.",
+          "selftext": "I've been offered a promotion to go into EA (Enterprise Architecture). I like to know people's opinion. I've worked with EAs before and like many, I usually think of Ivory Tower. As an architect myself, others might think the same in my current role.\n\nIn my current role, I am given complex projects that business feels like I can execute fairly quick. I assemble a team and in many instances, I am like the Project Manager. But technical. I do the system designs. I do the POCs and I mentor the team. I have skill of memory retention so I can absorb a lot of info where I easily become the SME. Even if I didn't work in it, I am the first guy they call if there is a production outage. I can swiftly resolve it even the original developer/authors are stumped. Because I work across a lot of teams, I understand how their services work. I can look at a foregin code base and jump right in very quick and understand the mechanics. So, my department gives me a lot of work. I can crank out 6-8 big projects a year. Those are tangible. I can summarize my impact, the value of my work that I delivered what and how impactful those projects are. This is useful for bonuses.\n\nNow, the new role is more governance based. I'd be writing a lot of Confluence documents on how to do things like securing an app. How to add in security gates in the CICD. These are all things I've done and implemented but it is tribal and specific to my team. The org likes that. They like how I can secure an AI model with guard rails,etc. So they want that documented and work with other EA to set standards.\n\nTo me, that does not sound like much work. So I asked those questions during my interview.  Also, I will now be parachuted into lots of different projects/stacks outside of what I normally work. I'd be jumped into a mobile IOS app or a Main Frame app. It would give me exposre to all the technology across the organization beyond web microservices and web apps. I'd visit all the teams and see all their tooling to make sure one team is not using Kong, another using Apigee, and another using WSO as API gateways. And then start crafting standards to use one. To save $$$ and obviously reign in on fragmentation.\n\nAnother role is getting parachuted into new intake at the discovery process. Where I do the initial design then bail out. This is foreign to me. If I do a design, I see it all the way through. If I dictate a technical choice, I make sure the team learns the tech and I mentor/teach them to get up to speed. I never dictate a technical decision if I can't back it up and show/train others. And this to me is important.  Engineers will struggle and need help. They need technical mentoring. I will be doing none of that. Lastly, my claim to fame is ensuring things get done. If things are stalled, I will roll up my sleeves. Hence, my successful track record of project delivery. I also want to note, I am hands on in the project like setting up backlog, creating estimates, writing up Jira stories. And making sure velocity is on track with Product owners. I am called in to give technical feedback and help with creating QA testing and things like that. So I am involved like a technical product owner. As an EA, I bail once the project starts. They do their own backlog, stories, setting up milestones.\n\nIn this new role, I don't know you even track success. Like what do you even say in your end year review? I wrote 30 confluence documents? In my current role, I can say I produce this result with this ROI and impact/value.\n\nIs this how other EAs work in other orgs? Like an outsider?"
+        }
+      ]
+    }
+  ]
+}
