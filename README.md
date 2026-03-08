@@ -47,6 +47,7 @@ Both pipelines:
 
 - `doc2vec_embeddings.py`: end-to-end embedding and clustering pipeline (Section 1)
 - `word2vec_bagofwords_embeddings.py`: Word2Vec Bag-of-Words embedding and clustering pipeline (Section 2)
+- `compare_embedding_methods.py`: comparison script for results of Doc2Vec vs. Word2Vec Bag-Of-Words (Section 3)
 - `requirements.txt`: Python dependencies for this project
 
 ## Requirements
