@@ -14,6 +14,13 @@ Both pipelines:
 - compare configurations using quantitative and qualitative signals,
 - export plots for visual inspection of clustering quality.
 
+### Team: pylovers
+| Name | USC ID |
+|------|--------|
+| Dylan Chen | 6984540266 |
+| Angela Kang | 8957777203 |
+| Vincent-Daniel Yun | 4463771151 |
+
 ## Features
 
 - Doc2Vec training with configurable hyperparameters
