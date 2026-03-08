@@ -126,3 +126,6 @@ For each configuration:
 - `config_comparison.png` (cross-configuration comparison)
 - Per-config JSON summaries with metrics, cluster keywords, subreddit distributions, and representative posts
 - Combined JSON with all configs and the recommended configuration
+
+
+## Section 3: Comparative Analysis
