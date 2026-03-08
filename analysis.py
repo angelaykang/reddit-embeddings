@@ -230,12 +230,6 @@ def plot_metric_bars(summary_df: pd.DataFrame, outdir: str):
         plt.close()
         print(f"Saved plot -> {path}")
 
-
-def plot_best_vs_best(best_df: pd.DataFrame, outdir: str):
-    # User asked not to save this image.
-    return
-
-
 def plot_method_average(summary_df: pd.DataFrame, outdir: str):
     grouped = summary_df.groupby(["method_key", "method"], as_index=False).agg({
         "cosine_silhouette": "mean",
@@ -374,7 +368,6 @@ def main():
 
     plot_metric_bars(summary_df, args.outdir)
     plot_method_average(summary_df, args.outdir)
-    plot_best_vs_best(best_df, args.outdir)
 
     best_doc_item = extract_best_item(doc2vec_items)
     best_bow_item = extract_best_item(word2vec_items)
