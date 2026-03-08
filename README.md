@@ -132,7 +132,7 @@ For each configuration:
 Run the comparative analysis script:
 
 ```bash
-python analysis.py \
+python compare_embedding_methods.py \
   --doc2vec-dir "doc2vec_results" \
   --word2vec-dir "word2vec_bagofwords_results" \
   --outdir "section3_comparison_results"
@@ -147,4 +147,3 @@ Command-Line Options
 Notes    
 - Run Section 1 and Section 2 first so that the JSON result files exist.      
 - Section 3 uses the saved outputs from those two scripts and does not retrain embeddings.     
-- If newer data is used, the Section 3 results may differ slightly from the earlier Section 1 and Section 2 values.     
