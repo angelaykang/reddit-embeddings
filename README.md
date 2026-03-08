@@ -129,3 +129,22 @@ For each configuration:
 
 
 ## Section 3: Comparative Analysis
+Run the comparative analysis script:
+
+```bash
+python analysis.py \
+  --doc2vec-dir "doc2vec_results" \
+  --word2vec-dir "word2vec_bagofwords_results" \
+  --outdir "section3_comparison_results"
+```
+
+Command-Line Options    
+`--doc2vec-dir <path>`: directory containing Doc2Vec JSON result files (default: doc2vec_results)    
+`--word2vec-dir <path>`: directory containing Word2Vec Bag-of-Words JSON result files (default: word2vec_bagofwords_results)    
+`--outdir <path>`: output directory for Section 3 plots and summaries (default: section3_comparison_results)    
+
+
+Notes    
+- Run Section 1 and Section 2 first so that the JSON result files exist.      
+- Section 3 uses the saved outputs from those two scripts and does not retrain embeddings.     
+- If newer data is used, the Section 3 results may differ slightly from the earlier Section 1 and Section 2 values.     
