@@ -143,6 +143,11 @@ Command-Line Options
 `--word2vec-dir <path>`: directory containing Word2Vec Bag-of-Words JSON result files (default: word2vec_bagofwords_results)    
 `--outdir <path>`: output directory for Section 3 plots and summaries (default: section3_comparison_results)    
 
+     
+Expected screen:    
+
+<img width="1198" height="278" alt="Image" src="https://github.com/user-attachments/assets/b1611296-933b-4c19-9ba3-557b7a4514fe" />
+
 
 Notes    
 - Run Section 1 and Section 2 first so that the JSON result files exist.      
